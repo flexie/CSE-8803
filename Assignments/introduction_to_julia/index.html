@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Introduction to julia - Imaging w/ data-driven models</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../outline/">Outline</a>
+                            </li>
+                            <li >
+                                <a href="../../goals/">Goals</a>
+                            </li>
+                            <li >
+                                <a href="../../reading/">Reading</a>
+                            </li>
+                            <li >
+                                <a href="../../homework/">Assigments</a>
+                            </li>
+                            <li >
+                                <a href="../../project/">Projects</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#a-quick-introduction-to-the-julia-language">A quick introduction to the Julia language</a></li>
+            <li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#the-julia-repl">The Julia REPL</a></li>
+            <li><a href="#packages-and-plotting">Packages and Plotting</a></li>
+            <li><a href="#arrays-and-tuples">Arrays and tuples</a></li>
+            <li><a href="#controll-flow">Controll Flow</a></li>
+            <li><a href="#functions">Functions</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="a-quick-introduction-to-the-julia-language">A quick introduction to the Julia language</h2>
+<h3 id="getting-started">Getting started</h3>
+<p>Start an interactive Julia session by running <code>julia</code> from the command line. You can quit the session with <code>quit()</code>. Generally, all functions in Julia are run using parenthesis, even if there are no input arguments.</p>
+<pre><code class="julia">pwd()
+</code></pre>
+
+<pre><code>"/home/philipp"
+</code></pre>
+<pre><code class="julia">whos()
+</code></pre>
+
+<pre><code>                          Base               Module
+                        Compat  19502 KB     Module
+                          Core               Module
+                        IJulia  19567 KB     Module
+                          JSON  19384 KB     Module
+                          Main               Module
+                       MbedTLS  19412 KB     Module
+                     Nullables   1120 bytes  Module
+                           ZMQ  19357 KB     Module
+</code></pre>
+<p>You can define Julia scripts as regular text files that end with <code>.jl</code> and use your favourite text editor to code. Once you have your script, e.g.:</p>
+<p>hello-world.jl</p>
+<pre><code>println(&quot;Hello world&quot;)
+</code></pre>
+
+<p>you can run the script with <code>include("hello-world.jl")</code>.</p>
+<h3 id="the-julia-repl">The Julia REPL</h3>
+<p>REPL stands for Read/Evaluate/Print/Loop and refers to the interactive Julia session (it's just like a Matlab session). It's good for experimenting, but any serious coding should be done using scripts instead.</p>
+<pre><code class="julia">42
+</code></pre>
+
+<pre><code>42
+</code></pre>
+<pre><code class="julia">4 + 5
+
+</code></pre>
+
+<pre><code>9
+</code></pre>
+<pre><code class="julia">100 / 5;
+</code></pre>
+
+<p>Unlike Matlab, you can access Julia's help functions by typing the question mark, followed by the function that you want the documention of:</p>
+<pre><code class="julia">? quit
+</code></pre>
+
+<pre><code>search: [1mq[22m[1mu[22m[1mi[22m[1mt[22m [1mQ[22m[1mu[22m[1mi[22mckSor[1mt[22m Partial[1mQ[22m[1mu[22m[1mi[22mckSor[1mt[22m [1mq[22m[1mu[22mant[1mi[22mle [1mq[22m[1mu[22mant[1mi[22mle!
+</code></pre>
+<pre><code>quit()
+</code></pre>
+
+<p>Quit the program indicating that the processes completed successfully. This function calls <code>exit(0)</code> (see <a href="@ref"><code>exit</code></a>).</p>
+<p>Similarly, you can enter the shell mode by typing <code>;</code>, which gives you access to a full bash terminal.</p>
+<pre><code class="julia">; pwd
+</code></pre>
+
+<pre><code>/home/philipp
+</code></pre>
+<p>In contrast to Matlab, Julia treats all operators as functions. This means you can add two numbers in either of the two ways:</p>
+<pre><code class="julia">a = 4 + 5
+</code></pre>
+
+<pre><code>9
+</code></pre>
+<pre><code class="julia">a = +(4, 5)
+</code></pre>
+
+<pre><code>9
+</code></pre>
+<p>The same applies for any other operations, such as subtraction, multiplications etc. Some math constants are defined in Julia by default, such as:</p>
+<pre><code class="julia">print(pi)
+</code></pre>
+
+<pre><code>π = 3.1415926535897...
+</code></pre>
+<p>Julia was designed with the intend to write code that resembles mathematics as close as possible. For example, you can omit the multiplication operator when working with variables:</p>
+<pre><code class="julia">x = 5
+2x + 4    # which is the same as 2*x + 4
+</code></pre>
+
+<pre><code>14
+</code></pre>
+<p>Just as Matlab, but different than Python, Julia comes with many built-in math functions that you would need for everyday use:</p>
+<pre><code class="julia">sin(pi / 2)
+</code></pre>
+
+<pre><code>1.0
+</code></pre>
+<pre><code class="julia">log(100)
+</code></pre>
+
+<pre><code>4.605170185988092
+</code></pre>
+<pre><code class="julia">exp(4.3)
+</code></pre>
+
+<pre><code>73.69979369959579
+</code></pre>
+<pre><code class="julia">rand()
+</code></pre>
+
+<pre><code>0.5282624241978122
+</code></pre>
+<h3 id="packages-and-plotting">Packages and Plotting</h3>
+<p>Packages provide additional functionalities, that are not included in core Julia. Packages are written both by official Julia programmers, as well as anyone else who programs in Julia.</p>
+<p>Since native Julia does not include any plotting tools, we have to download a third-party package, such as <code>PyPlot</code> or <code>Plots</code>:</p>
+<pre><code class="julia">Pkg.add(&quot;PyPlot&quot;)
+</code></pre>
+
+<pre><code>[1m[36mINFO: [39m[22m[36mInstalling JUDI v0.1.0
+[39m[1m[36mINFO: [39m[22m[36mBuilding Dierckx
+[39m
+
+make: Nothing to be done for `all'.
+
+
+[1m[36mINFO: [39m[22m[36mBuilding Conda
+[39m[1m[36mINFO: [39m[22m[36mBuilding PyCall
+[39m[1m[36mInfo: [39m[22m[36mPyCall is using /home/philipp/GATechBundle/Miniconda3/bin/python3 (Python 3.6.6) at /home/philipp/GATechBundle/Miniconda3/bin/python3, libpython = /home/philipp/GATechBundle/Miniconda3/lib/libpython3.6m
+[39m[1m[36mInfo: [39m[22m[36m/home/philipp/.julia/v0.6/PyCall/deps/deps.jl has been updated
+[39m[1m[36mInfo: [39m[22m[36m/home/philipp/.julia/v0.6/PyCall/deps/PYTHON has been updated
+[39m[1m[36mINFO: [39m[22m[36mPackage database updated
+[39m[1m[36mINFO: [39m[22m[36mMETADATA is out-of-date — you may not have the latest version of PyPlot
+[39m[1m[36mINFO: [39m[22m[36mUse `Pkg.update()` to get the latest versions of your packages
+[39m
+</code></pre>
+<p>Once you have downloaded a package, you can use it by typing:</p>
+<pre><code class="julia">using PyPlot
+</code></pre>
+
+<p>This plotting package is based off Python's Matplotlib package and therefore shares much of the Syntax. Some common plotting commands include:</p>
+<pre><code class="julia">x = 1:100;
+f = x .^ 2;
+</code></pre>
+
+<pre><code class="julia">plot(x, f)
+</code></pre>
+
+<p><img alt="png" src="../../img/introduction_to_julia_35_0.png" /></p>
+<pre><code>1-element Array{PyCall.PyObject,1}:
+ PyObject &lt;matplotlib.lines.Line2D object at 0x7f4b10781d30&gt;
+</code></pre>
+<pre><code class="julia">A = randn(20,30);
+imshow(A, extent=[0,30,20,40])
+</code></pre>
+
+<p><img alt="png" src="../../img/introduction_to_julia_36_0.png" /></p>
+<pre><code>PyObject &lt;matplotlib.image.AxesImage object at 0x7f4b105585c0&gt;
+</code></pre>
+<h3 id="arrays-and-tuples">Arrays and tuples</h3>
+<p>Arrays are defined in a similar fashion to Matlab:</p>
+<pre><code class="julia">x = [1, 2, 3, 4, 5]
+</code></pre>
+
+<pre><code>5-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+ 5
+</code></pre>
+<p>As you can see from the output on the screen, Julia actually cares about types of variables and arrays. Since we defined our array as a collection of integers, the type of our array is `{Int64,1}</p>
+<pre><code class="julia">y = [1., 2., 3., 4., 5.]
+</code></pre>
+
+<pre><code>5-element Array{Float64,1}:
+ 1.0
+ 2.0
+ 3.0
+ 4.0
+ 5.0
+</code></pre>
+<p>You can make a vector out of anything, not just numbers. For example, you can collect strings in a vector like this:</p>
+<pre><code class="julia">s = [&quot;This&quot;, &quot;is&quot;, &quot;a&quot;, &quot;string&quot;, &quot;vector&quot;]
+</code></pre>
+
+<pre><code>5-element Array{String,1}:
+ "This"  
+ "is"    
+ "a"     
+ "string"
+ "vector"
+</code></pre>
+<pre><code class="julia">s = [&quot;string&quot;, 4.0, sin, pi]
+</code></pre>
+
+<pre><code>4-element Array{Any,1}:
+   "string"            
+  4.0                  
+   sin                 
+ π = 3.1415926535897...
+</code></pre>
+<p>Multi-dimensional arrays are formed as follows:</p>
+<pre><code class="julia">A = [1 2 3 4; 5 6 7 8]
+</code></pre>
+
+<pre><code>2×4 Array{Int64,2}:
+ 1  2  3  4
+ 5  6  7  8
+</code></pre>
+<p>Note that entries of the same row are separated by spaces and rows are separated by <code>;</code></p>
+<p>You can also initialize vectors/matrices of a given dimension in various ways:</p>
+<pre><code class="julia">B = zeros(4,5)
+</code></pre>
+
+<pre><code>4×5 Array{Float64,2}:
+ 0.0  0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0  0.0
+ 0.0  0.0  0.0  0.0  0.0
+</code></pre>
+<pre><code class="julia">C = rand(2,3)
+</code></pre>
+
+<pre><code>2×3 Array{Float64,2}:
+ 0.189405  0.938612  0.359612
+ 0.553322  0.868266  0.102811
+</code></pre>
+<pre><code class="julia">D = ones(4,2)
+</code></pre>
+
+<pre><code>4×2 Array{Float64,2}:
+ 1.0  1.0
+ 1.0  1.0
+ 1.0  1.0
+ 1.0  1.0
+</code></pre>
+<p>Unlike Matlab, entries of matrices are accessed with square brackets, rather than parenthesis. Index counting starts at 1 (not 0).</p>
+<pre><code class="julia">C[1,1]
+</code></pre>
+
+<pre><code>0.1894051459813404
+</code></pre>
+<pre><code class="julia">C[1,:]
+</code></pre>
+
+<pre><code>3-element Array{Float64,1}:
+ 0.189405
+ 0.938612
+ 0.359612
+</code></pre>
+<pre><code class="julia">C[1,2:end]
+</code></pre>
+
+<pre><code>2-element Array{Float64,1}:
+ 0.938612
+ 0.359612
+</code></pre>
+<p>Another useful structure, e.g. for plotting and loops, are <code>range</code> and <code>linspace</code>:</p>
+<pre><code class="julia">r = 1:2:10
+print(typeof(r))
+</code></pre>
+
+<pre><code>StepRange{Int64,Int64}
+</code></pre>
+<pre><code class="julia">l = linspace(4,8.5, 7)
+print(typeof(l))
+</code></pre>
+
+<pre><code>StepRangeLen{Float64,Base.TwicePrecision{Float64},Base.TwicePrecision{Float64}}
+</code></pre>
+<p>You can convert the vectors <code>r</code> and <code>l</code> to regular Julia arrays using the <code>collect</code> function:</p>
+<pre><code class="julia">collect(r)
+</code></pre>
+
+<pre><code>5-element Array{Int64,1}:
+ 1
+ 3
+ 5
+ 7
+ 9
+</code></pre>
+<pre><code class="julia">collect(l)
+</code></pre>
+
+<pre><code>7-element Array{Float64,1}:
+ 4.0
+ 4.75
+ 5.5
+ 6.25
+ 7.0
+ 7.75
+ 8.5
+</code></pre>
+<p>Similar to Matlab, it is possible to reshape arrays or stack multiple arrays to form new matrices:</p>
+<pre><code class="julia">A = randn(3,4)
+</code></pre>
+
+<pre><code>3×4 Array{Float64,2}:
+  0.509555   -1.79653    0.842718  -0.713901
+ -0.0580305   0.609266   1.72787   -0.731359
+  0.10706     2.91134   -1.26744   -0.0453605
+</code></pre>
+<pre><code class="julia">reshape(A, 4, 3)
+</code></pre>
+
+<pre><code>4×3 Array{Float64,2}:
+  0.509555   0.609266  -1.26744  
+ -0.0580305  2.91134   -0.713901
+  0.10706    0.842718  -0.731359
+ -1.79653    1.72787   -0.0453605
+</code></pre>
+<pre><code class="julia">vec(A)
+</code></pre>
+
+<pre><code>12-element Array{Float64,1}:
+  0.509555
+ -0.0580305
+  0.10706  
+ -1.79653  
+  0.609266
+  2.91134  
+  0.842718
+  1.72787  
+ -1.26744  
+ -0.713901
+ -0.731359
+ -0.0453605
+</code></pre>
+<pre><code class="julia">B = [A; A]
+</code></pre>
+
+<pre><code>6×4 Array{Float64,2}:
+  0.509555   -1.79653    0.842718  -0.713901
+ -0.0580305   0.609266   1.72787   -0.731359
+  0.10706     2.91134   -1.26744   -0.0453605
+  0.509555   -1.79653    0.842718  -0.713901
+ -0.0580305   0.609266   1.72787   -0.731359
+  0.10706     2.91134   -1.26744   -0.0453605
+</code></pre>
+<p>One of the pitfalls of Julia is that assigning an array with the equal sign, does not copy the array, but creates a referece.</p>
+<pre><code class="julia">A = ones(2,3)
+</code></pre>
+
+<pre><code>2×3 Array{Float64,2}:
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+</code></pre>
+<pre><code class="julia">B = A
+</code></pre>
+
+<pre><code>2×3 Array{Float64,2}:
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+</code></pre>
+<pre><code class="julia">A[1,:] = 2
+println(A)
+</code></pre>
+
+<pre><code>[2.0 2.0 2.0; 1.0 1.0 1.0]
+</code></pre>
+<pre><code class="julia">show(B)
+
+</code></pre>
+
+<pre><code>[2.0 2.0 2.0; 1.0 1.0 1.0]
+</code></pre>
+<p>To copy an array, use the <code>copy</code> function</p>
+<pre><code class="julia">A = ones(2,3)
+</code></pre>
+
+<pre><code>2×3 Array{Float64,2}:
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+</code></pre>
+<pre><code class="julia">B = copy(A)
+</code></pre>
+
+<pre><code>2×3 Array{Float64,2}:
+ 1.0  1.0  1.0
+ 1.0  1.0  1.0
+</code></pre>
+<pre><code class="julia">A[1,:] = 2
+println(A)
+</code></pre>
+
+<pre><code>[2.0 2.0 2.0; 1.0 1.0 1.0]
+</code></pre>
+<pre><code class="julia">println(B)
+</code></pre>
+
+<pre><code>[1.0 1.0 1.0; 1.0 1.0 1.0]
+</code></pre>
+<p>We see that <code>B</code> has not been changed!</p>
+<p>Some other differences between Matlab and Julia are <code>min</code> and <code>max</code> functions. These functions only return the min/max of two input variables:</p>
+<pre><code class="julia">min(5,100)
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<p>To obtain the smallest/largest entry of a vector, use the <code>minimum</code> and <code>maximum</code> functions:</p>
+<pre><code class="julia">x = [1,2,3,4,5,6]
+println(minimum(x))
+println(maximum(x))
+</code></pre>
+
+<pre><code>1
+6
+</code></pre>
+<h3 id="controll-flow">Controll Flow</h3>
+<p>Control flow in Julia, i.e. <code>if/else</code> statements, <code>for</code> loops or <code>while</code> loops, are similar to other programming languages. Here are some examples of different ways of controlling the flow:</p>
+<pre><code class="julia">for j=1:2:8
+    println(j)
+end
+</code></pre>
+
+<pre><code>1
+3
+5
+7
+</code></pre>
+<pre><code class="julia">for color in [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;] # an array
+    print(color, &quot; &quot;)
+end
+</code></pre>
+
+<pre><code>red green blue
+</code></pre>
+<pre><code class="julia">x = 10
+while x &gt; 1
+    x -= 1
+    println(x)
+end
+</code></pre>
+
+<pre><code>9
+8
+7
+6
+5
+4
+3
+2
+1
+</code></pre>
+<pre><code class="julia">name = &quot;Julia&quot;
+if name == &quot;Julia&quot;
+   println(&quot;I like Julia&quot;)
+elseif name == &quot;Python&quot;
+   println(&quot;I like Python.&quot;)
+   println(&quot;But I prefer Julia.&quot;)
+else
+   println(&quot;I don't know what I like&quot;)
+end
+</code></pre>
+
+<pre><code>I like Julia
+</code></pre>
+<h3 id="functions">Functions</h3>
+<p>Functions are a useful building block to structure your code and build subroutines etc. The most generic way to define functions in Julia is like this:</p>
+<pre><code class="julia">function my_function(arg1, arg2)
+    # do some work
+end
+</code></pre>
+
+<pre><code>my_function (generic function with 1 method)
+</code></pre>
+<p>Functions can have any number of input arguments, including none:</p>
+<pre><code class="julia">function breakfast()
+   maketoast()
+   brewcoffee()
+end
+</code></pre>
+
+<pre><code>breakfast (generic function with 1 method)
+</code></pre>
+<p>By default, Julia functions always return the output from the last line of function. By using the <code>return</code> keyword, you can indicate a specific value that should be returned.</p>
+<pre><code class="julia">function my_func(x, y)
+    x_new = 2x
+    y_new = 2y
+end
+z = my_func(3,4)
+</code></pre>
+
+<pre><code>8
+</code></pre>
+<pre><code class="julia">function my_func(x, y)
+    return x_new = 2x
+    y_new = 2y
+end
+z = my_func(3,4)
+</code></pre>
+
+<pre><code>6
+</code></pre>
+<p>By grouping results as tuples, it is possible to return multiple variables:</p>
+<pre><code class="julia">function my_func(x, y)
+    x_new = 2x
+    y_new = 2y
+    return (x_new, y_new)
+end
+z = my_func(3,4)
+</code></pre>
+
+<pre><code>(6, 8)
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
