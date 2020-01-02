@@ -1,8 +1,6 @@
 site_name: Imaging w/ data-driven models
 pages:
-    - Outline: outline.md
-    - Goals: goals.md
-    - Reading: reading.md
+    - Topics: outline.md
     - Assigments: homework.md
     - Projects: project.md
 

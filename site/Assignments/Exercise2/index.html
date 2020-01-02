@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>NMO correction - Imaging w/ data-driven models</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../outline/">Outline</a>
+                            </li>
+                            <li >
+                                <a href="../../goals/">Goals</a>
+                            </li>
+                            <li >
+                                <a href="../../reading/">Reading</a>
+                            </li>
+                            <li >
+                                <a href="../../homework/">Assigments</a>
+                            </li>
+                            <li >
+                                <a href="../../project/">Projects</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#nmo-correction">NMO correction</a></li>
+        <li class="main "><a href="#pick-a-midpoint">Pick a midpoint</a></li>
+        <li class="main "><a href="#constant-velocity-nmo-correction">Constant velocity NMO correction</a></li>
+        <li class="main "><a href="#windowing">Windowing</a></li>
+        <li class="main "><a href="#stack-power">Stack power</a></li>
+        <li class="main "><a href="#look-at-the-velocity-profile-with-the-picked-tauv-pairs">Look at the velocity profile with the picked tau/v pairs</a></li>
+        <li class="main "><a href="#velocity-analysis">Velocity analysis</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="nmo-correction">NMO correction</h1>
+<p>The traveltime as a function of offset of a reflected event can be approximated by the NMO traveltime:</p>
+<p>$
+\tau(t_0,h) = \sqrt{t_0 + h^2/v^2}
+$</p>
+<p>where $(t_0)$ is the zero-offset or vertical traveltime and $v$ is the effective or NMO velocity.</p>
+<p>We can now correct the data for the moveout via a simple coordinate transform:</p>
+<p>$
+d_{NMO}(t_0,h) = d(\tau(t_0,h),h)
+$</p>
+<p>You can use the function <code>nmo</code> implemented below for this exercise.</p>
+<pre><code class="julia">using Dierckx
+function nmo(cmp, t, off, v)
+# NMO correction and adjoint
+#
+# use:
+#   out = nmo(in,t,h,v,flag)
+#
+# input:
+#   in   - data matrix of size [length(t) x length(h)], each column is a trace
+#   t    - time vector [s]
+#   offsets    - offset vector [m]
+#   v    - NMO velocity [m/s] as vector of size [length(t) x 1].
+#   flag - 1:forward, -1:adjoint
+#
+# output
+#   out  - data matrix of size [length(t) x length(h)], each column is a trace
+
+    # size of data
+    nt, nh = size(cmp)
+    # make sure t and v are column vectors
+    t = t[:]
+    v = v[:]
+    # initialize output
+    out = zeros(nt, nh)
+    # loop over offset
+    for i = 1:nh
+        # NMO traveltime
+        tau = sqrt.(t.^2 + off[i].^2./v.^2);
+        # interpolate, forward or adjoint
+        spl = Spline1D(t, cmp[1e-3*T.-t.&lt;1e-5, i])
+        out[:,i] = spl(tau)
+    end
+    return out
+end
+</code></pre>
+
+<pre><code>nmo (generic function with 1 method)
+</code></pre>
+<pre><code class="julia">using SeisIO, PyPlot
+</code></pre>
+
+<pre><code class="julia"># read the dataset
+
+blocks = segy_read(&quot;/data/mlouboutin3/Class_data/cube2.segy&quot;);
+</code></pre>
+
+<pre><code class="julia">sx = get_header(blocks, &quot;SourceX&quot;;scale=false)
+rx = get_header(blocks, &quot;GroupX&quot;;scale=false);
+
+</code></pre>
+
+<pre><code class="julia"># Get the time axis. In this case the time axis is the same for all traces so we only need to extract it from the first trace
+# dt needs to be corrected for the binary setup
+# All the times are in ms
+dt = get_header(blocks, &quot;dt&quot;)[1]/1000
+nt = get_header(blocks, &quot;ns&quot;)[1]
+T = 0:dt:(nt-1)*dt
+</code></pre>
+
+<pre><code>0.0:4.0:2000.0
+</code></pre>
+<pre><code class="julia"># Midpoint and offset
+h = (sx .- rx);
+m = (sx .+ rx)./2;
+</code></pre>
+
+<pre><code class="julia">all_m = hcat(m'...)'
+fold = [sum(all_m .== unique(all_m)[i]) for i=1:length(unique(all_m))];
+
+all_h = hcat(h'...)';
+</code></pre>
+
+<h1 id="pick-a-midpoint">Pick a midpoint</h1>
+<pre><code class="julia">Im = find(all_m .== all_m[1000])
+offsets = sort((all_h[Im]));
+inds = sortperm(all_h[Im])
+cmp = Float32.(blocks.data[:, Im[inds]]);
+</code></pre>
+
+<pre><code class="julia">figure()
+imshow(cmp, vmin=-1, vmax=1, cmap=&quot;Greys&quot;, aspect=3, extent=[offsets[1], offsets[end], T[end], 0])
+xlabel(&quot;offset&quot;)
+ylabel(&quot;time&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_10_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'time')
+</code></pre>
+<h1 id="constant-velocity-nmo-correction">Constant velocity NMO correction</h1>
+<pre><code class="julia">nmo_corrected1 = nmo(cmp, 1e-3.*T, offsets, 2000. + 0.*T);
+</code></pre>
+
+<pre><code class="julia">figure()
+imshow(nmo_corrected1, vmin=-1, vmax=1, cmap=&quot;Greys&quot;, aspect=3, extent=[offsets[1], offsets[end], T[end], 0])
+xlabel(&quot;offset&quot;)
+ylabel(&quot;time&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_13_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'time')
+</code></pre>
+<h1 id="windowing">Windowing</h1>
+<p>We can see a lot of `artifacts' in the NMO corrected gather above. To avoid some of the artifacts, the midpoint gathers are often windowed to select reflected data only. All events that arrive before the direct wave are removed. A typical window looks like this (Hint: the slope of the triangle is related to the veloctity of the direct wave).</p>
+<pre><code class="julia"># grid
+tt = [1e-3*ti for ti in T for h in offsets]
+hh = [h for ti in T for h in offsets]
+
+# initialize window to zero and set times later than first arrival to 1.
+W=0.*tt;W[tt.&gt;(.1+ abs.(hh)./1500)] = 1
+W = reshape(W, size(cmp)[2], size(cmp)[1])
+imshow(W', vmin=0, vmax=1, cmap=&quot;jet&quot;, aspect=3, extent=[offsets[1], offsets[end], T[end], 0])
+xlabel(&quot;offset&quot;)
+ylabel(&quot;time&quot;)
+
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_15_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'time')
+</code></pre>
+<pre><code class="julia">muted = W'.*cmp;
+</code></pre>
+
+<pre><code class="julia">figure()
+imshow(muted, vmin=-1e0, vmax=1e0, cmap=&quot;Greys&quot;, aspect=3, extent=[offsets[1], offsets[end], T[end], 0])
+xlabel(&quot;offset&quot;)
+ylabel(&quot;time&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_17_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'time')
+</code></pre>
+<h1 id="stack-power">Stack power</h1>
+<p>To figure out which NMO velocity optimally flattens all the events, we can scan through a range of constant NMO velocities and see which events are flattened for which velocity. One way to judge flatness of an event is via the stackpower. The stackpower is just a sum along the offset direction of the values-squared of the NMO-corrected gather:</p>
+<p>$ S(t_0,v) = \int!!\mathrm{d}h\, d(\tau(t_0,h,v),h)^2 $</p>
+<p>The function $ S(t_0,v) $ is called a semblance panel.</p>
+<p>The desired NMO velocity can be found by picking the maximum as a function of $t_0$ and $v$ from the semblance panel.</p>
+<p>An example of a semblance panel and the resulting NMO velocity is shown below.</p>
+<pre><code class="julia">v = linspace(1000, 3000, 500)
+# scan over velocities
+S = zeros(length(T),length(v));
+for k = 1:length(v)
+    cmp_nmo = nmo(muted, 1e-3.*T, offsets, v[k] .+ 0.*T);
+    S[:,k]  = sum(cmp_nmo.^2,2);
+end
+</code></pre>
+
+<pre><code class="julia">#Plot semblance panel
+figure()
+imshow(S, vmin=0, vmax=1e3, cmap=&quot;jet&quot;, aspect=1, extent=[v[1], v[end], T[end], 0])
+xlabel(&quot;velocity&quot;)
+ylabel(&quot;tau&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_20_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'tau')
+</code></pre>
+<pre><code class="julia">#  pick v/tau pairs
+</code></pre>
+
+<pre><code class="julia">tv   = 1e3*[0,    0.30, 0.35, 0.46, 0.65, 1.27, 2.00];
+vnmo =     [1500, 1500, 1600, 1700, 2000, 2179, 3000];
+spl = Spline1D(tv, vnmo; k=1)
+vnmo_all = spl(T);
+</code></pre>
+
+<h1 id="look-at-the-velocity-profile-with-the-picked-tauv-pairs">Look at the velocity profile with the picked tau/v pairs</h1>
+<pre><code class="julia"># Enable gui to have the cursor and pick v/tau pairs
+figure()
+imshow(S, vmin=0, vmax=1e3, cmap=&quot;jet&quot;, aspect=1, extent=[v[1], v[end], T[end], 0])
+plot(vnmo_all, T, &quot;-k&quot;)
+xlabel(&quot;velocity&quot;)
+ylabel(&quot;tau&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_24_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'tau')
+</code></pre>
+<pre><code class="julia">nmo_corrected = nmo(muted, 1e-3.*T, offsets, vnmo_all) ;
+</code></pre>
+
+<pre><code class="julia">figure()
+imshow(nmo_corrected, vmin=-1e0, vmax=1e0, cmap=&quot;Greys&quot;, aspect=3, extent=[offsets[1], offsets[end], T[end], 0])
+xlabel(&quot;offset&quot;)
+ylabel(&quot;time&quot;)
+</code></pre>
+
+<p><img alt="png" src="../../img/Exercise2_26_0.png" /></p>
+<pre><code>PyObject Text(24,0.5,'time')
+</code></pre>
+<h1 id="velocity-analysis">Velocity analysis</h1>
+<p>Repeat the above outline procedure for a couple of mipdoint positions xm (e.g., <code>xm = [500 1000 2000]</code>). Organize the resulting NMO velocities in a matrix <code>Vm</code> (where column i is the NMO velocity for midpoint <code>xm[i]</code>) interpolate the results to obtain a velocity for all the midpoints using <code>Spline1D(xm, VM); spl(all_m)</code>. Plot the velocity and discuss.</p>
+<p>Using this NMO velocity, we can produce an NMO stack. Perform an NMO correction of all the midpoint gathers using the corresponding NMO velocity derived above and sum each along the offset direction. Organize all the stacks in a matrix and plot the result. Also make a stack using a constant NMO velocity. Discuss the results.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -42,7 +42,7 @@ TBA
 
 ### Assignments
 
-See assignment tab.
+See [assignment](homework.md) tab.
 
 ### Slides
 
@@ -75,7 +75,7 @@ See assignment tab.
 TBA
 
 ###Assignments
-See [assignment] tab.
+See [assignment](homework.md) tab.
 
 ### Slides
 
@@ -108,7 +108,7 @@ TBA
 
 ###Assignments
 
-See [assignment] tab.
+See [assignment](homework.md) tab.
 
 ### Slides
 [Approximation and Coding with Orthogonal Decompositions] adapted from [here].
@@ -138,7 +138,7 @@ See [assignment] tab.
 TBA
 
 ### Assignments
-See [assignment] tab.
+See [assignment](homework.md) tab.
 
 ### Slides
 [Linear and nonlinear denoising] adapted from [here].
@@ -162,7 +162,7 @@ See [assignment] tab.
 TBA
 
 ### Assignments
-See [assignment] tab.
+See [assignment](homework.md) tab.
 
 ### Slides
 [Inverse problems Regularization] adapted from [here].
@@ -171,17 +171,66 @@ See [assignment] tab.
 
 ## Sparse Regularization of Inverse Problems
 
+- Linear inverse problems
+	- denoising
+	- inpainting
+	- super- resolution
+- Regularization of inverse problems
+	- regularized inverse
+	- Lagrangian formulation including the the Lagrange multiplier/trade-off parameter lambda
+	- smooth and cartoon priors
+- Redundant dictionaries
+- Sparse priors
+	- convex relaxation of the $\ell_0-norm$ via the $\ell_1$-norm
+	- $\ell_1$-regularization and sparse recovery
+	- noise-free sparsity-promoting regularization
+- Iterative soft thresholding
+
+### Reading material
+TBA
+
+Assignments
+See [assignment](homework.md) tab.
+
+### Slides
+[Sparse regularization of Inverse Problems] adapted from [here].
+
+***
 
 
-# Convex Optimization for Imaging
+## Compressive Sensing
 
-# Compressive Sensing
+- Classical sampling
+   - discretization
+	 - point-wise sampling and smoothness
+- Compressive acquisition
+	- examples single pixel camera
+	- physical model
+- Inversion and sparsity
+	- $\ell_1$ prior
+	- sparse CS recovery
+- Theoretical guarantees
+	- CS with restricted isometry constants (RIP)
+	- singular-value distributions
+	- RIP for Gaussian matrices
+	- numerics with RIP
+- Fourier measurements
+	- MRI imaging
+	- radar interferometry
+	- structured measurements
 
-# Sparse L1 Recovery
+### Assignments
+See [assignment](homework.md) tab.
 
-# Statistical Regularization 
+### Slides
+[Compressive Sensing] adapted from [here].
 
-# Learning in Functional Analytic Regularization
+*** 
+## Statistical Regularization 
 
-# Learning in Statistical Regularization
+## Learning in Functional Analytic Regularization
 
+## Learning in Statistical Regularization
+
+[here]:https://mathematical-tours.github.io/slides/
+[assignment]:
