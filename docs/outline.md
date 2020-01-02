@@ -226,11 +226,11 @@ See [assignment](homework.md) tab.
 [Compressive Sensing] adapted from [here].
 
 *** 
-## Statistical Regularization 
+### Statistical Regularization 
 
-## Learning in Functional Analytic Regularization
+### Learning in Functional Analytic Regularization
 
-## Learning in Statistical Regularization
+### Learning in Statistical Regularization
 
 [here]:https://mathematical-tours.github.io/slides/
 [assignment]:
