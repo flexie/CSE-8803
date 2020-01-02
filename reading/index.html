@@ -47,13 +47,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="../outline/">Outline</a>
-                            </li>
-                            <li >
-                                <a href="../goals/">Goals</a>
-                            </li>
-                            <li class="active">
-                                <a href="./">Reading</a>
+                                <a href="../outline/">Topics</a>
                             </li>
                             <li >
                                 <a href="../homework/">Assigments</a>
@@ -69,16 +63,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../goals/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../homework/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -87,116 +71,11 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#general-introduction">General introduction</a></li>
-            <li><a href="#reading-material">Reading material</a></li>
-            <li><a href="#material-presented-in-class">Material presented in class</a></li>
-        <li class="main "><a href="#seismic-data-acquisition">Seismic data acquisition</a></li>
-            <li><a href="#material-presented-in-class_1">Material presented in class</a></li>
-        <li class="main "><a href="#from-processing-to-inversion">From processing to inversion</a></li>
-            <li><a href="#reading-material_1">Reading material</a></li>
-            <li><a href="#material-presented-in-class_2">Material presented in class</a></li>
-        <li class="main "><a href="#compressive-sensing">Compressive sensing</a></li>
-            <li><a href="#reading-material_2">Reading material</a></li>
-            <li><a href="#material-presented-in-class_3">Material presented in class</a></li>
-        <li class="main "><a href="#linearized-inversion">Linearized inversion</a></li>
-            <li><a href="#reading-material_3">Reading material</a></li>
-            <li><a href="#material-presented-in-class_4">Material presented in class</a></li>
-        <li class="main "><a href="#rtm-fwi">RTM &amp; FWI</a></li>
-            <li><a href="#reading-material_4">Reading material</a></li>
-            <li><a href="#material-presented-in-class_5">Material presented in class</a></li>
-        <li class="main "><a href="#review">Review</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="general-introduction">General introduction</h1>
-<h4 id="reading-material">Reading material</h4>
-<ul>
-<li>John Scales: <a href="https://www.dropbox.com/s/cdt8ndqy3fnvqpf/imaging_scales.pdf?dl=0">Theory of Seismic Imaging</a> Chapters 1, 2, 10.3</li>
-<li>Guy Drijkoningen: <a href="https://www.dropbox.com/s/x7sng1s982484o0/SeismicProcessing2%28tg001_ta3600%29.pdf?dl=0">Seismic Data Processing</a> - TG001 / TA3600 Chapters 1,2,3, 4.6, 4.7. and <a href="https://www.dropbox.com/s/hgheb1u1rrflzpk/IntroductionreflectionSeismology%28ta3520%29.pdf?dl=0">Introduction to Reflection Seismology TA3520</a> Chapter 5.</li>
-<li>Yilmaz's “bible”</li>
-</ul>
-<h4 id="material-presented-in-class">Material presented in class</h4>
-<ul>
-<li><a href="https://www.dropbox.com/s/5e4mn6zhq4jn6fr/1-Exploration_Seismology.pdf?dl=0">Slides for Lecture 1: Introduction</a></li>
-<li><a href="https://www.dropbox.com/s/7qi7kgm3d4ciakx/2-Exploration_Seismology-basics.pdf?dl=0">Slides for Lecture 2: Basic Seismic Data Processing 1</a></li>
-<li><a href="https://www.dropbox.com/s/cix0d679i52t0x3/3-Exploration_Seismology-basics.pdf?dl=0">Slides for Lecture 3: Basic seismic data processing 2</a></li>
-<li><a href="https://www.dropbox.com/s/eaajioq7vbtga0g/4-Exploration_Seismology-basics.pdf?dl=0">Slides for Lecture 4: Basic seismic data processing 3</a></li>
-<li><a href="https://www.dropbox.com/s/hfyc81n012s8o4a/5-Exploration_Seismology-basics.pdf?dl=0">Slides for Lecture 5: Basic seismic data processing 4</a></li>
-<li><a href="https://www.dropbox.com/s/5sl67ssdzehu7jl/6-Exploration_Seismology-migration.pdf?dl=0">Slides for Lecture 6: Basic seismic data processing 5</a></li>
-<li><a href="https://www.dropbox.com/s/589st3bu5a5qwpg/7-Exploration_Seismology-migration.pdf?dl=0">Slides for Lecture 7: Basic seismic data processing 6</a></li>
-<li><a href="https://www.dropbox.com/s/w3yv0atpmm46fa6/8-Exploration_Seismology-migration.pdf?dl=0">Slides for Lecture 8: Basic seismic data processing 7</a></li>
-<li><a href="https://www.dropbox.com/s/589st3bu5a5qwpg/7-Exploration_Seismology-migration.pdf?dl=0">Slides for Lecture 7: Basic seismic data processing 6</a></li>
-<li><a href="https://www.dropbox.com/s/w3yv0atpmm46fa6/8-Exploration_Seismology-migration.pdf?dl=0">Slides for Lecture 8: Basic seismic data processing 7</a></li>
-<li><a href="https://www.dropbox.com/s/qda2nol5s8cl18o/9-Exploration_Seismology-fk-radon.pdf?dl=0">Slides for Lecture 9: Basic seismic data processing 8</a></li>
-<li><a href="https://www.dropbox.com/s/x2hfi4k0kcflvq3/10-Exploration_Seismology-fk-radon.pdf?dl=0">Slides for Lecture 10: Basic seismic data processing 9</a></li>
-<li><a href="https://www.dropbox.com/s/2y2proguwxhtooq/11-Exploration_Seismology-fk-radon.pdf?dl=0">Slides for Lecture 11: Basic seismic data processing 10</a></li>
-</ul>
-<hr />
-<h1 id="seismic-data-acquisition">Seismic data acquisition</h1>
-<h4 id="material-presented-in-class_1">Material presented in class</h4>
-<ul>
-<li><a href="https://www.dropbox.com/s/psfngqbbli2uvm3/12-Exploration_Seismology-acquisition.pdf?dl=0">Slides for Lecture 12: Practical aspects of seismic acquisition</a></li>
-<li><a href="https://www.dropbox.com/s/2ob9rynqvwa9mtt/13-Exploration_Seismology-deconvolution.pdf?dl=0">Slides for Lecture 13: Practical aspects of seismic acquisition</a></li>
-</ul>
-<hr />
-<h1 id="from-processing-to-inversion">From processing to inversion</h1>
-<h4 id="reading-material_1">Reading material</h4>
-<ul>
-<li>Jon Claerbout: IMAGE ESTIMATION BY EXAMPLE: <a href="http://sep.stanford.edu/sep/prof/gee7-2011.pdf">Geophysical Soundings Image Construction</a> Chapter 1.</li>
-<li>John A. Scales, Martin L. Smith and Sven Treitel <a href="https://www.dropbox.com/s/okubbea8ohp632q/Book_Inversion_Theory.pdf.pdf?dl=0">Introductory Geophysical Inverse Theory</a> Chapter 4</li>
-<li>Richard Baraniuk: <a href="http://science.sciencemag.org/content/sci/331/6018/717.full.pdf">More Is Less: Signal Processing and the Data Deluge</a></li>
-<li>Felix J. Herrmann, Michael P.Friedlander, Ozgur Yilmaz: <a href="https://www.dropbox.com/s/m7v4pkb2qr4qww5/sigprocmag.pdf?dl=0">Fighting the curse of dimensionality: compressive sensing in exploration seismology</a></li>
-<li>Felix J. Herrmann: <a href="http://slim.eos.ubc.ca/Publications/Public/Journals/herrmann2010rsa.pdf">Randomized sampling and sparsity: getting more information from fewer samples</a>. Geophysics 75, WB173 (2010); doi:10.1190/1.350614</li>
-</ul>
-<h4 id="material-presented-in-class_2">Material presented in class</h4>
-<ul>
-<li><a href="https://www.dropbox.com/s/rok2gfwp8y3zagd/14-inversion_intro.pdf?dl=0">Slides for Lecture 14: From Processing to Inversion</a></li>
-<li><a href="https://www.dropbox.com/s/atl71lgiivkxqon/15-Exploration_Seismology-inversion_radon.pdf?dl=0">Slides for Lecture 15: From Processing to Inversion-Radon</a></li>
-</ul>
-<hr />
-<h1 id="compressive-sensing">Compressive sensing</h1>
-<h4 id="reading-material_2">Reading material</h4>
-<ul>
-<li>IEEE Signal Processing Magazine Richard Baraniuk: Compressive sensing and More Is Less: Signal Processing and the Data Deluge</li>
-<li>Emmanuel Candes and Michael Wakin: An introduction to Compressive Sensing</li>
-<li>Justin Romberg: Imaging via compressive sampling</li>
-<li>Felix J. Herrmann: Randomized sampling and sparsity: getting more information from fewer samples. Geophysics 75, WB173 (2010); doi:10.1190/1.350614</li>
-<li>Felix J. Herrmann, Michael P. Friedlander, Ozgur Yilmaz: Fighting the curse of dimensionality: compressive sensing in exploration seismology</li>
-</ul>
-<h4 id="material-presented-in-class_3">Material presented in class</h4>
-<ul>
-<li><a href="https://www.dropbox.com/s/hvngq6y0yyqx8lw/16-Exploration_Seismology-cs-1.pdf?dl=0">Slides for Lecture 16: Basics Compressive Sensing</a></li>
-<li><a href="https://www.dropbox.com/s/73iuuysqz3ts11h/17-Exploration_Seismology-inversion-cs-2.pdf?dl=0">Slides for Lecture 17: Theory Compressive Sensing</a></li>
-<li><a href="https://www.dropbox.com/s/v1d1s6cmvi8nw87/18-Exploration_Seismology-inversion-cs-3.pdf?dl=0">Slides for Lecture 18: Theory Compressive Sensing - Design Principles Sensing</a></li>
-<li><a href="https://www.dropbox.com/s/gntmsrpiy8yyndf/19-Exploration_Seismology-CS-4.pdf?dl=0">Slides for Lecture 19: Compressive Sensing - Latest</a></li>
-</ul>
-<hr />
-<h1 id="linearized-inversion">Linearized inversion</h1>
-<h4 id="reading-material_3">Reading material</h4>
-<ul>
-<li>A. Gisolf. On the shortcomings of linear AVP( AVO/AVA) inversion.</li>
-</ul>
-<h4 id="material-presented-in-class_4">Material presented in class</h4>
-<ul>
-<li><a href="https://www.dropbox.com/s/6530m03nwj4edeo/20-Exploration_Seismology-AVO.pdf?dl=0">Slides for Lecture 20: Linearized inversion of amplitude-versus-offset data</a></li>
-</ul>
-<hr />
-<h1 id="rtm-fwi">RTM &amp; FWI</h1>
-<h4 id="reading-material_4">Reading material</h4>
-<ul>
-<li>Gerhard Pratt: Gauss-Newton and full Newton methods in frequency domain seismic waveform inversion. Geophysical Journal International, 133, 341-362.</li>
-<li>Andreas Fichtner: Full Seismic Waveform Modelling and Inversion chapter 10 and 11</li>
-</ul>
-<h4 id="material-presented-in-class_5">Material presented in class</h4>
-<ul>
-<li>Full-waveform inversion</li>
-</ul>
-<hr />
-<h1 id="review">Review</h1>
-<ul>
-<li><a href="https://www.dropbox.com/s/05tyot8l4yaejfc/21-Exploration_Seismology-review.pdf?dl=0">Slides for Lecture 21: Review Migration,  Velocity Analyses, and AVO</a></li>
-</ul></div>
+</div>
         </div>
 
         <footer class="col-md-12">
