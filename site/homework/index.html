@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Homework - Exploration Seismology</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Exploration Seismology</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../info.md">Info</a>
+                            </li>
+                            <li >
+                                <a href="../outline/">Outline</a>
+                            </li>
+                            <li >
+                                <a href="../goals/">Goals</a>
+                            </li>
+                            <li >
+                                <a href="../reading/">Reading</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Homework</a>
+                            </li>
+                            <li >
+                                <a href="../project/">Projects</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../reading/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../project/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#installation">Installation</a></li>
+            <li><a href="#julia">Julia</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#docker">Docker</a></li>
+            <li><a href="#exercises">Exercises</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="installation">Installation</h1>
+<p>The assignments require <a href="https://julialang.org">Julia</a> and Python to be installed.</p>
+<p>For Windows, I recommend to use docker as <a href="https://www.devitoproject.org">Devito</a> does not support Windows.</p>
+<h2 id="julia">Julia</h2>
+<p>To install julia follow</p>
+<p>https://julialang.org/downloads/</p>
+<p>And install Julia 0.7 or earlier</p>
+<p>DO NOT INSTALL JULIA 1.0</p>
+<h2 id="python">Python</h2>
+<p>The recommended installation is via conda to have a stable environment.</p>
+<p>https://conda.io/miniconda.html</p>
+<h2 id="packages">Packages</h2>
+<p>For devito:</p>
+<pre><code>git clone -b v3.2.0 https://github.com/opesci/devito.git
+cd devito
+conda env create -f environment.yml
+source activate devito
+pip install -e .
+</code></pre>
+
+<p>This will create your devito environment. Remeber to always call <code>source activate devito</code> at every new session.</p>
+<p>For JUDI, start julia and run</p>
+<pre><code>Pkg.add(&quot;JUDI&quot;)
+</code></pre>
+
+<p>all the dependencies should install.</p>
+<h2 id="docker">Docker</h2>
+<p>First install docker for your system</p>
+<p>https://www.docker.com/products/docker-desktop</p>
+<p>Instead of having to install Python, Julia, Devito, JUDI and all the dependencies by yourself, you simply download the docker image and run it in a container. All you need to do is install docker and run:</p>
+<pre><code>docker run -p 8888:8888 philippwitte/judi:v1.0.0
+</code></pre>
+
+<p>This will download the image and launch a jupyter notebook that you can access from your internet browser. The command will display a link, which looks something like this:</p>
+<pre><code>Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://0e27b13128d4:8888/?token=84a95cf4319e8e68534f20c7c6474d9875f13c70270f35f4&amp;token=84a95cf4319e8e68534f20c7c6474d9875f13c70270f35f4
+</code></pre>
+
+<p>Copy-paste this link and replace the address <code>0e27b13128d4:8888</code> with <code>localhost:8888</code> (the link is created inside the docker container, which doesn't know that you mapped this port to your localhost w/ port no. 8888). Instead of a notebook, you can also launch an interactive session with a terminal by running:</p>
+<pre><code>docker run -it philippwitte/judi:v1.0.0 /bin/bash
+</code></pre>
+
+<p>This will give you access to a terminal, in which you can start Julia/Python, run things interactively or modify code.</p>
+<h2 id="exercises">Exercises</h2>
+<p>During the course you will work on the following exercises</p>
+<ol>
+<li>
+<p>A first look at seismic data. <a href="../Assignments/introduction_to_julia/">Intro to julia</a> <a href="../Assignments/Exercise1/">Exercise 1</a> <a href="https://www.slim.eos.ubc.ca/Teaching/EOSC454/exercise1_sol.html">[Solution]</a></p>
+</li>
+<li>
+<p>NMO correction and velocity analysis <a href="../Assignments/Exercise2/">Exercise 2</a></p>
+</li>
+<li>
+<p>Wavefield extrapolation and migration. <a href="../Assignments/Exercise3/">Exercise 3</a></p>
+</li>
+<li>
+<p>Fourier, Radon and filtering.<a href="../Assignments/Exercise4/">Exercise 4</a></p>
+</li>
+<li>
+<p>From processing to inversion I.<a href="../Assignments/Exercise5/">Exercise 5</a></p>
+</li>
+<li>
+<p>From processing to inversion II. <a href="../Assignments/Exercise6/">Exercise 6</a></p>
+</li>
+<li>
+<p>Full Waveform inversion. <a href="../Assignments/Exercise7/">Exercise 7</a></p>
+</li>
+</ol>
+<p>These exercises will introduce you to the <a href="https://julialang.org">Julia programming language</a>, <a href="https://www.devitoproject.org">Devito</a>-a Domain-specific Language (DSL) for automatic code generation for highly optimized finite differences, and <a href="https://github.com/slimgroup/JUDI.jl">Judi</a>-a framework for large-scale seismic modeling and inversion and designed to enable rapid translations of algorithms to fast and efficient code that scales to industry-size problems.</p>
+<h3 id="hand-in">Hand in</h3>
+<p>Please turn in your assignments as pdf files. The assignments should be send to <a href="mailto:felix.herrmann@gatech.edu">Felix J. Herrmann</a>. Late hand ins are not accepted.</p>
+<p>Unless stated otherwise the labs are due one week after the lab.</p>
+<h3 id="feedback">Feedback</h3>
+<p>We will give you feedback on the marking of the exercises.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
