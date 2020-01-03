@@ -6,7 +6,7 @@
 Phone: +1 (404) 385-7069  
 CODA, room S1375B
 
-Time and Location Monday/Wednesday 3:00 pm - 4:15 pm, Molecular Sciences rm 1224
+Time and Location Tuesday/Thursday 3:00 pm - 4:15 pm, Molecular Sciences rm 1224
 
 Office Hours: by appointment 
 
