@@ -21,7 +21,9 @@
 	 - recovery by sparsity promotion
 
 ### Reading material
-TBA
+Chapter 1 from [Advanced Signal, Image and Surface Processing]
+
+[Advanced Signal, Image and Surface Processing]:https://www.dropbox.com/s/5pd1nec1cf7e2b4/AdvancedSignalProcessingNew.pdf?dl=0
 
 ### Slides
 
@@ -39,9 +41,7 @@ TBA
 
 ### Reading material
 
-Chapter 1 from [Advanced Signal, Image and Surface Processing]
-
-[Advanced Signal, Image and Surface Processing]:https://www.dropbox.com/s/5pd1nec1cf7e2b4/AdvancedSignalProcessingNew.pdf?dl=0
+TBA
 
 ### Assignments
 
