@@ -27,6 +27,7 @@ TBA
 
 [Signal and Image Decomposition in Orthogonal Bases] adapted from [here].
 
+[Signal and Image Decomposition in Orthogonal Bases]:https://www.dropbox.com/s/efy6fghhip6y7ko/1-course-signal-orthobases-new.pdf?dl=0
 *** 
 
 ## Fourier Processing
@@ -38,7 +39,9 @@ TBA
 
 ### Reading material
 
-TBA
+Chapter 1 from [Advanced Signal, Image and Surface Processing]
+
+[Advanced Signal, Image and Surface Processing]:https://www.dropbox.com/s/5pd1nec1cf7e2b4/AdvancedSignalProcessingNew.pdf?dl=0
 
 ### Assignments
 
