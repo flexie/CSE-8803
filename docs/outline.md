@@ -41,8 +41,9 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 
 ### Reading material
 
-TBA
+Chapter 2 from [Advanced Signal, Image and Surface Processing]
 
+[Advanced Signal, Image and Surface Processing]:https://www.dropbox.com/s/5pd1nec1cf7e2b4/AdvancedSignalProcessingNew.pdf?dl=0
 ### Assignments
 
 See [assignment](homework.md) tab.
@@ -50,6 +51,8 @@ See [assignment](homework.md) tab.
 ### Slides
 
 [Fourier Processing] adapted from [here].
+
+[Fourier Processing]:https://www.dropbox.com/s/kbezzvt4b7ggh1z/2-course-signal-fourier-new.pdf?dl=0
 
 *** 
 ## Wavelet Processing
@@ -75,7 +78,8 @@ See [assignment](homework.md) tab.
 	- fast 2D wavelet transform
 
 ###Reading material
-TBA
+Chapter 3 from [Advanced Signal, Image and Surface Processing]
+
 
 ###Assignments
 See [assignment](homework.md) tab.
@@ -83,6 +87,9 @@ See [assignment](homework.md) tab.
 ### Slides
 
 [Wavelet Processing] adapted from [here].
+
+[Wavelet Processing]:https://www.dropbox.com/s/wudhbew83lamxfg/3-course-signal-wavelets-new.pdf?dl=0
+
 
 ***
 ## Approximation with Orthogonal Decompositions
