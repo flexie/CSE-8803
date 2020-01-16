@@ -8,7 +8,7 @@ We will offer support for [Python]. You are free to work on your Assignments in 
 
 Make a script that produces the plots and carefully describes your findings. The code itself is part of the assignment; make sure that it is readable and carefully documented.
 
-Generate a pdf file from your script. This will generate a pdf including the plots, your descriptions and code. Make sure that the lay-out is readable. Look for documentation on making up Matlab code for publication.
+Generate a pdf file from your script. This will generate a pdf including the plots, your descriptions and code. Make sure that the lay-out is readable. Look for documentation on making up your code for publication.
 
 The naming convention for this file is studentnumber_assingmentnumber.pdf. Send the pdf to [Ali Siahkoohi](mailto:alisk@gatech.edu) with subject CSE 8803. For some exercises you will be asked to write separate functions. In this case include ALL the files in a zip-file named studentnumber_assingmentnumber.zip.
 

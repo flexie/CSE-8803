@@ -41,11 +41,12 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 
 ### Reading material
 
-Chapter 2 from [Advanced Signal, Image and Surface Processing]
+Chapter 2 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Fourier Transforms] from [Mathematical Foundations of Data Sciences].
 
+[Fourier Transforms]:https://mathematical-tours.github.io/book-sources/chapters-pdf/fourier.pdf
+[Mathematical Foundations of Data Sciences]:https://mathematical-tours.github.io/book/
 [Advanced Signal, Image and Surface Processing]:https://www.dropbox.com/s/5pd1nec1cf7e2b4/AdvancedSignalProcessingNew.pdf?dl=0
 ### Assignments
-
 See [assignment](homework.md) tab.
 
 ### Slides
@@ -78,8 +79,9 @@ See [assignment](homework.md) tab.
 	- fast 2D wavelet transform
 
 ###Reading material
-Chapter 3 from [Advanced Signal, Image and Surface Processing]
+Chapter 3 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Wavelets] from [Mathematical Foundations of Data Sciences].
 
+[Wavelets]:https://mathematical-tours.github.io/book/
 
 ###Assignments
 See [assignment](homework.md) tab.
@@ -114,8 +116,9 @@ See [assignment](homework.md) tab.
 	- curvelets, their construction, and properties
 
 ### Reading material
-TBA
+Chapter 4 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Linear and Non-linear Approximation] from [Mathematical Foundations of Data Sciences].
 
+[Linear and Non-linear Approximation]:https://mathematical-tours.github.io/book-sources/chapters-pdf/approximation.pdf
 ###Assignments
 
 See [assignment](homework.md) tab.
@@ -145,7 +148,9 @@ See [assignment](homework.md) tab.
 	- block thresholding
 
 ### Reading material
-TBA
+Chapter 5 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Denoising] from [Mathematical Foundations of Data Sciences].
+
+[Denoising]:https://mathematical-tours.github.io/book-sources/chapters-pdf/denoising.pdf
 
 ### Assignments
 See [assignment](homework.md) tab.
@@ -169,7 +174,9 @@ See [assignment](homework.md) tab.
 - Example from tomography with the Radon transform
 
 ###Reading material
-TBA
+Chapter 6 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Variational Priors and Regularization] from [Mathematical Foundations of Data Sciences].
+
+[Variational Priors and Regularization]:https://mathematical-tours.github.io/book-sources/chapters-pdf/variational-priors.pdf
 
 ### Assignments
 See [assignment](homework.md) tab.
@@ -197,8 +204,10 @@ See [assignment](homework.md) tab.
 - Iterative soft thresholding
 
 ### Reading material
-TBA
+Chapter 7 from [Advanced Signal, Image and Surface Processing]. If you want more detail read [Inverse Problems] and [Sparse Regularization] from [Mathematical Foundations of Data Sciences].
 
+[Inverse Problems]:https://mathematical-tours.github.io/book-sources/chapters-pdf/inverse-problems.pdf
+[Sparse Regularization]:https://mathematical-tours.github.io/book-sources/chapters-pdf/sparse-regularization.pdf
 Assignments
 See [assignment](homework.md) tab.
 
@@ -232,6 +241,10 @@ See [assignment](homework.md) tab.
 ### Assignments
 See [assignment](homework.md) tab.
 
+### Reading material
+[Compressive Sensing Chapter] from [Mathematical Foundations of Data Sciences].
+
+[Compressive Sensing Chapter]:https://mathematical-tours.github.io/book-sources/chapters-pdf/compressed-sensing.pdf
 ### Slides
 [Compressive Sensing] adapted from [here].
 
