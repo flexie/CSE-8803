@@ -10,7 +10,7 @@ To get the the recently tested Jupyter notebooks in Python, please clone the Num
 ### Posted assignments:
 
 1. Exercises 1 and 2 from [Introduction to Image Processing], exercises 1-4 from [Image Approximation with Fourier and Wavelets], and exercises 1-3 from [2-D Daubechies Wavelets]. 
-	* **Due date**: Thursday Jan 22nd at 3:00 PM.
+	* **Due date**: Thursday, January 23, at 3:00 PM.
 
 ### Handins 
 
