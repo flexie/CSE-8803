@@ -25,7 +25,9 @@ Proposal should be submitted in PDF format or a link to an html page. The projec
 
 #### Project presentation at the end of the term
 
-Each project presentation will be allotted 20 minutes precisely with 5 minutes of questions. The seminar should reflect the current status of the project, which may be subject to change when the project is finalized. The seminar will be evaluated using the following [form]. 
+Each project presentation will be allotted 20 minutes precisely with 5 minutes of questions. The seminar should reflect the current status of the project, which may be subject to change when the project is finalized. 
+
+<!-- The seminar will be evaluated using the following [form].  -->
 
 #### Final Report
 
@@ -40,7 +42,7 @@ The report needs to be written as a short journal paper. Students will be requir
 7. references
 8. appendices
 
-The report will be evaluated using the following [form].
+<!-- The report will be evaluated using the following [form]. -->
 
 #### Grading (project alone)
 
@@ -48,6 +50,7 @@ The report will be evaluated using the following [form].
 2. 30% Seminar
 3. 60% Final Report
 
-####Late policy
+#### Late policy
+
 Late submission is unacceptable and will lead to deductions in your grade. The deadline for submission will be communicate in class.
 
