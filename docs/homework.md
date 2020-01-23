@@ -12,13 +12,16 @@ To get the the recently tested Jupyter notebooks in Python, please clone the Num
 1. Exercises 1 and 2 from [Introduction to Image Processing], exercises 1-4 from [Image Approximation with Fourier and Wavelets], and exercises 1-3 from [2-D Daubechies Wavelets]. 
 	* **Due date**: Thursday, January 23, at 3:00 PM.
 
+2. Exercises 1-5 from [Volumetric wavelet Data Processing], exercises 1 and 2 from [Linear Image Denoising], exercises 1-3 from [Wavelet Denoising], exercises 1-4 from [Wavelet Block Thresholding], and exercises 1-6 from [Stein Unbiased Risk Estimator].
+	* **Due date**: Thursday, January 30, at 3:00 PM.
+
 ### Handins 
 
 Make a script that produces the plots and carefully describes your findings. The code itself is part of the assignment; make sure that it is readable and carefully documented. 
 
 Generate a pdf or HTML file from your script. You may do this by exporting the Jupyter notebook that contains your answers/codes. Make sure that the lay-out is readable. Look for documentation on making up your code for publication.
 
-The naming convention for this file is studentnumber_assingmentnumber.[pdf/html]. Send the file to [Ali Siahkoohi](mailto:alisk@gatech.edu) with subject CSE 8803. For some exercises you will be asked to write separate functions. In this case include ALL the files in a zip-file named studentnumber_assingmentnumber.zip.
+The naming convention for this file is studentnumber_assingmentnumber.[pdf/html]. Send the file to [Ali Siahkoohi](mailto:alisk@gatech.edu) with subject **CSE 8803**. For some exercises you will be asked to write separate functions. In this case include ALL the files in a zip-file named studentnumber_assingmentnumber.zip.
 
 If you need further assistance, you can find Ali at S1363L workstation (13th floor), Coda Building.
 
@@ -35,3 +38,9 @@ ASSINGMENTS THAT DO NOT FOLLOW THE NAMING CONVENTIONS OR ARE SEND AFTER THE POST
 [Introduction to Image Processing]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/introduction_3_image.ipynb
 [Image Approximation with Fourier and Wavelets]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/introduction_4_fourier_wavelets.ipynb
 [2-D Daubechies Wavelets]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/wavelet_4_daubechies2d.ipynb
+
+[Volumetric wavelet Data Processing]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/multidim_2_volumetric.ipynb
+[Linear Image Denoising]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/denoisingsimp_2b_linear_image.ipynb
+[Wavelet Denoising]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/denoisingwav_2_wavelet_2d.ipynb
+[Wavelet Block Thresholding]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/denoisingwav_4_block.ipynb
+[Stein Unbiased Risk Estimator]:https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/denoisingadv_9_sure.ipynb
