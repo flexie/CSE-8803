@@ -126,6 +126,8 @@ See [assignment](homework.md) tab.
 ### Slides
 [Approximation and Coding with Orthogonal Decompositions] adapted from [here].
 
+[Approximation and Coding with Orthogonal Decompositions]:https://www.dropbox.com/s/2wa1nwecas2pykj/4-course-signal-approximation.pdf?dl=0
+
 ***
 
 ## Linear and Nonlinear Denoising
@@ -158,6 +160,7 @@ See [assignment](homework.md) tab.
 ### Slides
 [Linear and nonlinear denoising] adapted from [here].
 
+[Linear and nonlinear denoising]:https://www.dropbox.com/s/xhpr4a4e60v7c9k/5-course-signal-denoising-new.pdf?dl=0
 ***
 
 ## Variational Regularization of Inverse Problems
@@ -184,6 +187,7 @@ See [assignment](homework.md) tab.
 ### Slides
 [Inverse problems Regularization] adapted from [here].
 
+[Inverse problems Regularization]:https://www.dropbox.com/s/let9p1m16hyiqzj/6-course-signal-inverse-pbm-variational-new.pdf?dl=0
 *** 
 
 ## Sparse Regularization of Inverse Problems
