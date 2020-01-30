@@ -218,6 +218,8 @@ See [assignment](homework.md) tab.
 ### Slides
 [Sparse regularization of Inverse Problems] adapted from [here].
 
+[Sparse regularization of Inverse Problems]:https://www.dropbox.com/s/idl446ja701xloe/7-course-signal-inverse-pbm-sparse-new.pdf?dl=0
+
 ***
 
 
@@ -251,6 +253,8 @@ See [assignment](homework.md) tab.
 [Compressive Sensing Chapter]:https://mathematical-tours.github.io/book-sources/chapters-pdf/compressed-sensing.pdf
 ### Slides
 [Compressive Sensing] adapted from [here].
+
+[Compressive Sensing]:https://www.dropbox.com/s/r4vs627jdyqfcnj/8-course-signal-compressive-sensing-new.pdf?dl=0
 
 *** 
 ### Statistical Regularization 
