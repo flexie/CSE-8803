@@ -261,22 +261,19 @@ See [assignment](homework.md) tab.
 ### General information generative neural networks
 
 #### Slides on generative models
-​
--  [Tutorial on Deep Generative Models - DeepMind](https://www.shakirm.com/slides/DeepGenModelsTutorial.pdf)
-​
--  [Probabilistic Deep Learning - Microsoft](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/Nowozin-Deep-Generative-Models-60-Minutes.pdf)
-​
--  [Lecture on Learning Deep Generative Models - Russ Salakhutdinov](http://www.cs.toronto.edu/~rsalakhu/Lecture1.pdf)
-​
+
+- [Tutorial on Deep Generative Models by DeepMind](https://www.shakirm.com/slides/DeepGenModelsTutorial.pdf)
+
+- [Probabilistic Deep Learning by Microsoft](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/Nowozin-Deep-Generative-Models-60-Minutes.pdf)
+
+- [Lecture on Learning Deep Generative Models by Russ Salakhutdinov](http://www.cs.toronto.edu/~rsalakhu/Lecture1.pdf)
 ​
 #### Ingredients of convolutional neural networks
-​
--  [Lecture on Convolutional Networks - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec11.pdf)
-​
-​
+
+- [Lecture on Convolutional Networks by Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec11.pdf)
 ​
 #### Tutorials and codes
-​
+
 -  [Super simple implementations of generative models in PyTorch and TensorFlow](https://github.com/wiseodd/generative-models) along with related [blog posts](https://wiseodd.github.io/)
 ​
 -  [Collection of generative models in PyTorch](https://github.com/znxlwm/pytorch-generative-model-collections)
@@ -285,7 +282,7 @@ See [assignment](homework.md) tab.
 ​
 ​
 #### Useful other material
-​
+
 - [Intro to Neural Networks and Machine Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/)
 ​
 - [Neural Networks and Deep Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/)
