@@ -258,6 +258,21 @@ See [assignment](homework.md) tab.
 
 *** 
 
+
+### Statistical Regularization 
+
+The review article [Solving inverse problems using data-driven models] serves as the major reading material. For a mathematical description of the February 6 and 11 lectures, refer to pages 22 till 43 from this article. 
+
+### Learning in Functional Analytic Regularization
+
+During the lecture of February 13, we start by considering section 5.1.2 Deep direct Bayes estimation on page 84 of [Solving inverse problems using data-driven models] untile Regularization by learning. We continue with section Deep direct estimation of higher-order moments on page 99. Next, we consider loop unrolling described in section 4.9 Data-driven optimization on page 66 until section 4.10 and later in section 5.1.4 Learned iterative schemes on page 89 until section 5.1.5. The supervised training, learned prior/regularizer, unsupervised learning, and semi-supervised learning are briefly introduced in section 5.1 Learning an estimator on page 82. 
+
+### Learning in Statistical Regularization
+
+[Solving inverse problems using data-driven models]:https://www.cambridge.org/core/journals/acta-numerica/article/solving-inverse-problems-using-datadriven-models/CE5B3725869AEAF46E04874115B0AB15
+
+***
+
 ### General information generative neural networks
 
 #### Slides on generative models
@@ -287,12 +302,6 @@ See [assignment](homework.md) tab.
 ​
 - [Neural Networks and Deep Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/)
 
-
-### Statistical Regularization 
-
-### Learning in Functional Analytic Regularization
-
-### Learning in Statistical Regularization
 
 [here]:https://mathematical-tours.github.io/slides/
 [assignment]:
