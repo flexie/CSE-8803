@@ -312,6 +312,7 @@ During the lecture of February 13, we start by considering section 5.1.2 Deep di
 ​
 - [Neural Networks and Deep Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/)
 
+- [Inverse Problems and Learning course - Ivan Dokmanic](https://courses.engr.illinois.edu/ece598id/sp2019/)
 
 [here]:https://mathematical-tours.github.io/slides/
 [assignment]:
