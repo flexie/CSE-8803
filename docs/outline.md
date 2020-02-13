@@ -282,21 +282,31 @@ During the lecture of February 13, we start by considering section 5.1.2 Deep di
 - [Probabilistic Deep Learning by Microsoft](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/Nowozin-Deep-Generative-Models-60-Minutes.pdf)
 
 - [Lecture on Learning Deep Generative Models by Russ Salakhutdinov](http://www.cs.toronto.edu/~rsalakhu/Lecture1.pdf)
-​
+
 #### Ingredients of convolutional neural networks
 
 - [Lecture on Convolutional Networks by Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec11.pdf)
 ​
+- [Lecture on Convolutional Networks by Fei-Fei Li](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture5.pdf)
+
+- Lectures on Convolutional Neural Networks by Sebastian Raschka, [Part 1](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part1_slides.pdf), [Part 2](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part2_slides.pdf), [Part 3](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part3_slides.pdf)
+
 #### Tutorials and codes
 
--  [Super simple implementations of generative models in PyTorch and TensorFlow](https://github.com/wiseodd/generative-models) along with related [blog posts](https://wiseodd.github.io/)
+- [A collection of various deep learning architectures, in TensorFlow and PyTorch (Jupyter Notebooks), by Sebastian Raschka](https://github.com/rasbt/deeplearning-models)
+
+- [Super simple implementations of generative models in PyTorch and TensorFlow](https://github.com/wiseodd/generative-models) along with related [blog posts](https://wiseodd.github.io/)
 ​
--  [Collection of generative models in PyTorch](https://github.com/znxlwm/pytorch-generative-model-collections)
+- [Collection of generative models in PyTorch](https://github.com/znxlwm/pytorch-generative-model-collections)
 ​
--  [Collection of generative models in TensorFlow](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
+- [Collection of generative models in TensorFlow](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
 ​
 ​
 #### Useful other material
+
+- [Deep Learning course - Sebastian Raschka](http://pages.stat.wisc.edu/~sraschka/teaching/stat479-ss2019/)
+
+- [Introduction to Deep Learning and Generative Models course - Sebastian Raschka (Spring 2020)](http://pages.stat.wisc.edu/~sraschka/teaching/stat453-ss2020/)
 
 - [Intro to Neural Networks and Machine Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/)
 ​
