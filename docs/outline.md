@@ -289,7 +289,7 @@ During the lecture of February 13, we start by considering section 5.1.2 Deep di
 ​
 - [Lecture on Convolutional Networks by Fei-Fei Li](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture5.pdf)
 
-- Lectures on Convolutional Neural Networks by Sebastian Raschka, [Part 1](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part1_slides.pdf), [Part 2](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part2_slides.pdf), [Part 3](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part3_slides.pdf)
+- Lectures ([Part 1](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part1_slides.pdf), [Part 2](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part2_slides.pdf), [Part 3](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part3_slides.pdf)) on Convolutional Neural Networks by Sebastian Raschka
 
 #### Tutorials and codes
 
