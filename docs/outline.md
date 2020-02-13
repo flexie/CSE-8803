@@ -291,6 +291,8 @@ During the lecture of February 13, we start by considering section 5.1.2 Deep di
 
 - Lectures ([Part 1](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part1_slides.pdf), [Part 2](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part2_slides.pdf), [Part 3](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part3_slides.pdf)) on Convolutional Neural Networks by Sebastian Raschka
 
+- [Visual guide to convolution arithmetic in the context of deep learning](https://github.com/vdumoulin/conv_arithmetic), and [associated paper](https://arxiv.org/pdf/1603.07285.pdf)
+
 #### Tutorials and codes
 
 - [A collection of various deep learning architectures, in TensorFlow and PyTorch (Jupyter Notebooks), by Sebastian Raschka](https://github.com/rasbt/deeplearning-models)
