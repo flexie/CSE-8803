@@ -271,6 +271,10 @@ During the lecture of February 13, we start by considering section 5.1.2 Deep di
 
 [Solving inverse problems using data-driven models]:https://www.cambridge.org/core/journals/acta-numerica/article/solving-inverse-problems-using-datadriven-models/CE5B3725869AEAF46E04874115B0AB15
 
+### Slides
+
+We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](https://jonasadler.com) and others. The slides presented in class can be found [here](https://www.dropbox.com/s/j6b5d0njmb7hzsj/Oktem.pdf?dl=0). 
+
 ***
 
 ### General information generative neural networks
