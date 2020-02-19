@@ -277,6 +277,75 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 
 ***
 
+### Papers
+
+- [Learning-Based Compressive Subsampling](https://arxiv.org/pdf/1510.06188.pdf)
+
+- [MoDL: Model Based Deep Learning Architecture for Inverse Problems](https://arxiv.org/pdf/1712.02862.pdf)
+
+- [Learning-Based Compressive MRI](https://arxiv.org/pdf/1805.01266.pdf)
+
+- [NETT Regularization for Compressed Sensing Photoacoustic Tomography](https://arxiv.org/pdf/1901.11158.pdf)
+
+- [Divergence Triangle for Joint Training of Generator Model, Energy-based Model, and Inference Model](https://arxiv.org/pdf/1812.10907.pdf)
+
+- [A Stein variational Newton method](https://papers.nips.cc/paper/8130-a-stein-variational-newton-method.pdf)
+
+- [Neural Ordinary Differential Equations](https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations.pdf)
+
+- [Invert to Learn to Invert](https://papers.nips.cc/paper/8336-invert-to-learn-to-invert.pdf)
+
+- [Recurrent Inference Machines for Solving Inverse Problems](https://www.ics.uci.edu/~welling/publications/papers/Submitted2016-RIM.pdf)
+
+- [Model based learning for accelerated, limited-view 3D photoacoustic tomography](https://arxiv.org/pdf/1708.09832.pdf)
+
+- [Multi-Scale Learned Iterative Reconstruction](https://arxiv.org/pdf/1908.00936.pdf)
+
+
+- [Sensitivity of a partially learned model-based reconstruction algorithm](https://ris.utwente.nl/ws/portalfiles/portal/103725020/Boink_et_al._2018_Sensitivity_of_a_partially_learned_model_based_reconstruction_algorithm.pdf)
+
+- [Degrees of Freedom Analysis of Unrolled Neural Networks](https://arxiv.org/pdf/1906.03742.pdf)
+
+- [Deep Generative Adversarial Neural Networks for Compressive Sensing MRI](https://arxiv.org/pdf/1706.00051.pdf)
+
+- [Solving ill-posed inverse problems using iterative deep neural networks](https://arxiv.org/pdf/1704.04058.pdf)
+
+- [Learned primal-dual reconstruction](https://arxiv.org/pdf/1707.06474.pdf)
+
+- [Learning to solve inverse problems using Wasserstein loss](https://arxiv.org/pdf/1710.10898.pdf)
+
+- [Deep bayesian inversion](https://arxiv.org/pdf/1811.05910.pdf)
+
+- [Transport map accelerated Markov chain Monte Carlo](https://arxiv.org/pdf/1412.5492.pdf)
+
+- [A transport-based multifidelity preconditioner for Markov chain Monte Carlo](https://arxiv.org/pdf/1808.09379.pdf)
+
+- [Guided Image Generation with Conditional Invertible Neural Networks](https://arxiv.org/pdf/1907.02392.pdf)
+
+- [GAN-based Projector for Faster Recovery with Convergence Guarantees in Linear Inverse Problems](https://arxiv.org/pdf/1902.09698.pdf)
+
+- [Solving Linear Inverse Problems Using GAN Priors: An Algorithm with Provable Guarantees](https://arxiv.org/abs/1802.08406)
+
+- [Low Shot Learning with Untrained Neural Networks for Imaging Inverse Problems](https://arxiv.org/abs/1910.10797)
+
+- [Stochastic Seismic Waveform Inversion using Generative Adversarial Networks as a Geological Prior](https://arxiv.org/pdf/1806.03720.pdf)
+
+- [Uncertainty Quantification with Generative Models](https://arxiv.org/pdf/1910.10046.pdf)
+
+- [Bayesian Inference with Generative Adversarial Network Priors](https://arxiv.org/pdf/1907.09987.pdf)
+
+- [A Bayesian Perspective on the Deep Image Prior](https://arxiv.org/pdf/1904.07457.pdf)
+
+- [Variational Inference for Computational Imaging Inverse Problems](https://arxiv.org/pdf/1904.06264v2.pdf)
+
+- [DeepRED: Deep Image Prior Powered by RED](https://arxiv.org/pdf/1903.10176.pdf)
+
+- [Algorithmic Guarantees for Inverse Imaging with Untrained Network Priors](https://arxiv.org/pdf/1906.08763.pdf)
+
+- [Adversarial Uncertainty Quantification in Physics-Informed Neural Networks](https://arxiv.org/pdf/1811.04026.pdf)
+
+*** 
+
 ### General information generative neural networks
 
 #### Slides on generative models
