@@ -389,6 +389,8 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 
 - [Deep Learning course - Sebastian Raschka](http://pages.stat.wisc.edu/~sraschka/teaching/stat479-ss2019/)
 
+- [Machine Learning & Data Mining course by Yisong Yue](http://www.yisongyue.com/courses/cs155/2019_winter/)
+
 - [Introduction to Deep Learning and Generative Models course - Sebastian Raschka (Spring 2020)](http://pages.stat.wisc.edu/~sraschka/teaching/stat453-ss2020/)
 
 - [Intro to Neural Networks and Machine Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/)
