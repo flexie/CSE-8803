@@ -344,6 +344,11 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 
 - [Adversarial Uncertainty Quantification in Physics-Informed Neural Networks](https://arxiv.org/pdf/1811.04026.pdf)
 
+- [HINT: Hierarchical Invertible Neural Transport for General and Sequential Bayesian inference](https://arxiv.org/pdf/1905.10687.pdf)
+​
+- [Analyzing Inverse Problems with Invertible Neural Networks](https://arxiv.org/pdf/1808.04730.pdf)
+
+
 *** 
 
 ### General information generative neural networks
