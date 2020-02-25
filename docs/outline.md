@@ -345,7 +345,7 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 - [Adversarial Uncertainty Quantification in Physics-Informed Neural Networks](https://arxiv.org/pdf/1811.04026.pdf)
 
 - [HINT: Hierarchical Invertible Neural Transport for General and Sequential Bayesian inference](https://arxiv.org/pdf/1905.10687.pdf)
-​
+
 - [Analyzing Inverse Problems with Invertible Neural Networks](https://arxiv.org/pdf/1808.04730.pdf)
 
 
@@ -354,6 +354,8 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 ### General information generative neural networks
 
 #### Slides on generative models
+
+- [Lecture on Deep Generative Models by Joe Marino](http://www.yisongyue.com/courses/cs155/2019_winter/lectures/Lecture_16.pdf) - [Video](https://www.youtube.com/watch?v=Sb6RQfG-QQM)
 
 - [Tutorial on Deep Generative Models by DeepMind](https://www.shakirm.com/slides/DeepGenModelsTutorial.pdf)
 
@@ -364,7 +366,7 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 #### Ingredients of convolutional neural networks
 
 - [Lecture on Convolutional Networks by Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/slides/lec11.pdf)
-​
+
 - [Lecture on Convolutional Networks by Fei-Fei Li](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture5.pdf)
 
 - Lectures ([Part 1](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part1_slides.pdf), [Part 2](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part2_slides.pdf), [Part 3](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/L13_intro-cnn/L13_intro-cnn-part3_slides.pdf)) on Convolutional Neural Networks by Sebastian Raschka
@@ -373,26 +375,31 @@ We use a combination of slides developed mainly by Ozan Oktem and [Jonas Adler](
 
 #### Tutorials and codes
 
+- [GAN lab, an interactive visualization for playing with GANs](https://poloclub.github.io/ganlab/)
+
 - [A collection of various deep learning architectures, in TensorFlow and PyTorch (Jupyter Notebooks), by Sebastian Raschka](https://github.com/rasbt/deeplearning-models)
 
 - [Super simple implementations of generative models in PyTorch and TensorFlow](https://github.com/wiseodd/generative-models) along with related [blog posts](https://wiseodd.github.io/)
-​
+
 - [Collection of generative models in PyTorch](https://github.com/znxlwm/pytorch-generative-model-collections)
-​
+
 - [Collection of generative models in TensorFlow](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
-​
-​
+
 #### Useful other material
 
 - [Deep Learning course - Sebastian Raschka](http://pages.stat.wisc.edu/~sraschka/teaching/stat479-ss2019/)
 
+- [Machine Learning & Data Mining course by Yisong Yue](http://www.yisongyue.com/courses/cs155/2019_winter/)
+
 - [Introduction to Deep Learning and Generative Models course - Sebastian Raschka (Spring 2020)](http://pages.stat.wisc.edu/~sraschka/teaching/stat453-ss2020/)
 
 - [Intro to Neural Networks and Machine Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/)
-​
+
 - [Neural Networks and Deep Learning course - Roger Grosse](http://www.cs.toronto.edu/~rgrosse/courses/csc421_2019/)
 
 - [Inverse Problems and Learning course - Ivan Dokmanic](https://courses.engr.illinois.edu/ece598id/sp2019/)
+
+- [Troubling Trends in Machine Learning Scholarship](https://arxiv.org/abs/1807.03341)
 
 [here]:https://mathematical-tours.github.io/slides/
 [assignment]:
