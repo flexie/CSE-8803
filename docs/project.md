@@ -14,7 +14,7 @@ The projects consist of three parts
 
 #### One pager + 5 min pitch
 
-On February 25th, everybody needs to give a 5 minute pitch on their project proposal. That same say, the "one pager" outlining the project is due by 6:00 PM.
+On February 25th, everybody needs to give a 5 minute pitch on their project proposal. That same day, the "one pager" outlining the project is due by 6:00 PM.
 
 #### Proposal
 
