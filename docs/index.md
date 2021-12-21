@@ -6,15 +6,15 @@
 Phone: +1 (404) 385-7069  
 CODA, room S1375B
 
-Time and Location Tuesday/Thursday 3:00 pm - 4:15 pm, Molecular Sciences rm 1224
+Time and Location Tuesday/Thursday 2:00 pm - 3:15 pm, Engineering Sci and Mechanics rm 201
 
-Office Hours: by appointment 
+Office Hours: by appointment via [Microsoft Teams](https://faq.oit.gatech.edu/content/how-do-i-access-microsoft-teams)
 
 *** 
 
 ### Course Description 
 
-*This course concerns inverse problems as they relate to imaging. After reviewing techniques from [Compressive Sensing], [Sparse Approximation], and [Convex Optimization] by means of lectures based on [Mathematical Foundations of Data Sciences] and computational assignments from [Numerical Tours of Data Sciences] (in [Matlab], [Python], [Julia], or [R]), the course shifts towards the state of the art of "Imaging w/ data-driven models" as outlined in the review article [Solving inverse problems using data-driven models] and the references therein. The reviewed techniques are of interest to areas in Computational Science and Engineering where data is incomplete, noisy and observed indirectly.*
+*This course concerns inverse problems as they relate to imaging. After reviewing techniques from [Compressive Sensing], [Sparse Approximation], and [Convex Optimization] by means of lectures based on [Mathematical Foundations of Data Sciences] and computational assignments from [Numerical Tours of Data Sciences] (in [Matlab], [Python], [Julia], or [R]), the course shifts towards the state of the art of "Imaging w/ data-driven models" as outlined in the review article [Solving inverse problems using data-driven models] and the references therein. Special emphasis will be given to Bayesian Inference with Normalizing Flows, a special type of invertible neural networks. The latter forms an important development since it alows for capturing uncertainty via distribution learning. The reviewed techniques are of interest to areas in Computational Science and Engineering where data is incomplete, noisy, and observed indirectly.*
 
 [Compressive Sensing]:https://en.wikipedia.org/wiki/Compressed_sensing
 [Convex Optimization]:https://en.wikipedia.org/wiki/Convex_optimization
