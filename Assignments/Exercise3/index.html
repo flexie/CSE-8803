@@ -9,57 +9,44 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Exercise 3: wavefield extrapolation and migration - Imaging w/ data-driven models</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
-                </div>
+                <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../../outline/">Topics</a>
+                            <li class="navitem">
+                                <a href="../../outline/" class="nav-link">Topics</a>
                             </li>
-                            <li >
-                                <a href="../../homework/">Assigments</a>
+                            <li class="navitem">
+                                <a href="../../homework/" class="nav-link">Assigments</a>
                             </li>
-                            <li >
-                                <a href="../../project/">Projects</a>
+                            <li class="navitem">
+                                <a href="../../project/" class="nav-link">Projects</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -69,19 +56,61 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#exercise-3-wavefield-extrapolation-and-migration">Exercise 3: wavefield extrapolation and migration</a></li>
-        <li class="main "><a href="#f-k-domain-transform-function-fktran">f-k domain transform function fktran</a></li>
-        <li class="main "><a href="#questions">Questions</a></li>
-        <li class="main "><a href="#zero-offset-migration">Zero-offset migration</a></li>
-        <li class="main "><a href="#questions_1">Questions</a></li>
-        <li class="main "><a href="#prestack-migration">Prestack migration</a></li>
-        <li class="main "><a href="#question">Question</a></li>
-        <li class="main "><a href="#questions_2">Questions</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#exercise-3-wavefield-extrapolation-and-migration" class="nav-link">Exercise 3: wavefield extrapolation and migration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#f-k-domain-transform-function-fktran" class="nav-link">f-k domain transform function fktran</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#questions" class="nav-link">Questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#zero-offset-migration" class="nav-link">Zero-offset migration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#questions_1" class="nav-link">Questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#prestack-migration" class="nav-link">Prestack migration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#question" class="nav-link">Question</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#questions_2" class="nav-link">Questions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="exercise-3-wavefield-extrapolation-and-migration">Exercise 3: wavefield extrapolation and migration</h1>
 <p>Contents:
@@ -92,11 +121,10 @@
 <p>For a constant-velocity medium, we can extrapolate a wavefield at depth $z$ to depth $z+\Delta z$ via a simple phase shift in the $f-k$ domain:</p>
 <p>$ u(\omega,k,z + \Delta z) = u(\omega,k,z)\exp[\imath\Delta z\sqrt(\omega^2/v^2 - k^2)]$</p>
 <p>To illustrate this, we generate a source wavefield in the $t-x$ domain and extrapolate it. First, let's define an impulsive source.</p>
-<pre><code class="julia">using PyPlot
+<pre><code class="language-julia">using PyPlot
 </code></pre>
-
 <h1 id="f-k-domain-transform-function-fktran">f-k domain transform function fktran</h1>
-<pre><code class="julia">function fktran(a,t,x,mode)
+<pre><code class="language-julia">function fktran(a,t,x,mode)
     &quot;&quot;&quot;
     f-k transform for real-values input.
 
@@ -140,10 +168,9 @@
     return b, f, k
 end
 </code></pre>
-
 <pre><code>fktran (generic function with 1 method)
 </code></pre>
-<pre><code class="julia"># time coordinate in seconds as column vector
+<pre><code class="language-julia"># time coordinate in seconds as column vector
 t = 0:.004:1;
 
 # spatial coordinate in meters as row vector
@@ -153,27 +180,23 @@ x = 0:10:1000;
 tt = [ti for ti in t, xi in x];
 xx = [xi for ti in t, xi in x];
 </code></pre>
-
-<pre><code class="julia"># Source wavefield is impulsive source at t=0.1 and x=500,
+<pre><code class="language-julia"># Source wavefield is impulsive source at t=0.1 and x=500,
 source = (tt-.1).*exp.(-1e-3*(xx.-500).^2 .- 1e3*(tt-.1).^2);
 </code></pre>
-
-<pre><code class="julia"># plot it
+<pre><code class="language-julia"># plot it
 imshow(source, cmap=&quot;Greys&quot;, extent=[x[1], x[end], t[end], t[1]], aspect=500)
 xlabel(&quot;x [m]&quot;)
 ylabel(&quot;t [s]&quot;)
 title(&quot;wavefield at z=0 m.&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_6_0.png" /></p>
 <pre><code>PyObject Text(0.5,1,'wavefield at z=0 m.')
 </code></pre>
-<pre><code class="julia"># now, transform it to the f-k domain using fktran
+<pre><code class="language-julia"># now, transform it to the f-k domain using fktran
 source_fk, f, k = fktran(source,t,x,1);
 </code></pre>
-
 <p>Next, we define the extrapolation factor and plot it.</p>
-<pre><code class="julia"># generate a grid for f,k
+<pre><code class="language-julia"># generate a grid for f,k
 ff = [fi for fi in f, ki in k]
 kk = [ki for fi in f, ki in k]
 
@@ -189,11 +212,10 @@ W  = exp.(dz*im.*kz)
 plot(k,abs.(W[ff.==10]))
 xlabel(&quot;k [1/m]&quot;);ylabel(&quot;|W|&quot;);title(&quot;|W| @ 10 Hz.&quot;);
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_9_0.png" /></p>
 <p>The region where the extrapolation factor is smaller than one is called the evanescent region. Waves this these wavenumbers will be damped. We have to be carefull with the sign of (k_z) in the exponentional factor and make sure that the absolute value is always smaller than one.</p>
 <p>The wavefield at z = 500 m looks like</p>
-<pre><code class="julia"># fix sign of kz
+<pre><code class="language-julia"># fix sign of kz
 kz = -real(kz)+im*abs.(imag(kz));
 W  = exp.(500*im.*kz);
 
@@ -206,7 +228,6 @@ xlabel(&quot;x [m]&quot;)
 ylabel(&quot;t [s]&quot;)
 title(&quot;wavefield at z=500 m.&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_11_0.png" /></p>
 <pre><code>PyObject Text(0.5,1,'wavefield at z=500 m.')
 </code></pre>
@@ -224,7 +245,7 @@ and taking the image to be slice of the wavefield at $t=0$ for each depth step: 
 <p>The function wave_extrap.m takes in a wavefield u and the correspoding time/space vectors t,x, a velocity v,
 a depth step dz and a propagation direction dir and extrapolates the input wavefield.</p>
 <p>Load the zero-offset <code>data data1_zero.segy</code> (in Dropbox) and define the source, receiver and time coordinates. The units of the source and receiver coordinates are in meters for this file. The data looks like this</p>
-<pre><code class="julia">using SeisIO
+<pre><code class="language-julia">using SeisIO
 
 # Dowload and adapt path
 shot = segy_read(&quot;data_zo.segy&quot;)
@@ -236,7 +257,6 @@ dt = get_header(shot, &quot;dt&quot;)[1]/1e6
 nt = get_header(shot, &quot;ns&quot;)[1]
 T = 0:dt:(nt -1)*dt
 </code></pre>
-
 <pre><code>[1m[33mWARNING: [39m[22m[33mFixed length trace flag set in stream: IOBuffer(data=UInt8[...], readable=true, writable=false, seekable=true, append=false, size=253644, maxsize=Inf, ptr=3601, mark=-1)[39m
 
 
@@ -245,16 +265,15 @@ T = 0:dt:(nt -1)*dt
 
 0.0:0.004:1.0
 </code></pre>
-<pre><code class="julia">imshow(shot_data, vmin=-.1, vmax=.1, cmap=&quot;Greys&quot;, extent=[sx[1], sx[end], T[end], T[1]], aspect=1000)
+<pre><code class="language-julia">imshow(shot_data, vmin=-.1, vmax=.1, cmap=&quot;Greys&quot;, extent=[sx[1], sx[end], T[end], T[1]], aspect=1000)
 xlabel(&quot;source position [m]&quot;)
 ylabel(&quot;t [s]&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_16_0.png" /></p>
 <pre><code>PyObject Text(24,0.5,'t [s]')
 </code></pre>
 <p>Use the function <code>wave_extrap</code> to migrate the zero offset section. A reasonable depth axis is z = 0:5:1000. Use the source position as lateral position x. The correct velocity is v0 = 2000 km/s (but, remember this is zero-offset migration so adapt the velocity accordingly!). A zero-offset migration can done as follows:</p>
-<pre><code class="julia">function wave_extrap(u,t,x,v,dz,dir)
+<pre><code class="language-julia">function wave_extrap(u,t,x,v,dz,dir)
 # wavefield extrapolation by phase shift
 #
 # use:
@@ -295,10 +314,9 @@ ylabel(&quot;t [s]&quot;)
     return v
 end
 </code></pre>
-
 <pre><code>wave_extrap (generic function with 1 method)
 </code></pre>
-<pre><code class="julia"># depth axis
+<pre><code class="language-julia"># depth axis
 z  = 0:5:1000
 dz = 5
 
@@ -313,14 +331,12 @@ for k = 1:length(z)
 end
 
 </code></pre>
-
-<pre><code class="julia"># plot it
+<pre><code class="language-julia"># plot it
 imshow(migcorr, cmap=&quot;Greys&quot;, vmin=-.1, vmax=.1, extent=[sx[1], sx[end], z[end], z[1]], aspect=1)
 xlabel(&quot;x [m]&quot;)
 ylabel(&quot;z [m]&quot;)
 title(&quot;correct velocity&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_20_0.png" /></p>
 <pre><code>PyObject Text(0.5,1,'correct velocity')
 </code></pre>
@@ -333,7 +349,7 @@ title(&quot;correct velocity&quot;)
 <h1 id="prestack-migration">Prestack migration</h1>
 <p>We can also create an image by extrapolating the source wavefields and the data and correlating them at different depth levels.</p>
 <p>Read the data <code>data_ex3.segy</code> (in Dropbox)</p>
-<pre><code class="julia">block = segy_read(&quot;data_ex3.segy&quot;)
+<pre><code class="language-julia">block = segy_read(&quot;data_ex3.segy&quot;)
 
 sx = get_header(block, &quot;SourceX&quot;, scale=false)
 rx = get_header(block, &quot;GroupX&quot;, scale=false)
@@ -346,11 +362,10 @@ T = 0:dt:(nt -1)*dt
 xs = unique(sx)
 xr = unique(rx);
 </code></pre>
-
 <pre><code>[1m[33mWARNING: [39m[22m[33mFixed length trace flag set in stream: IOBuffer(data=UInt8[...], readable=true, writable=false, seekable=true, append=false, size=1385684, maxsize=Inf, ptr=3601, mark=-1)[39m
 </code></pre>
 <p>We extrapolate both source and receiver wavefields for one shot using <code>wave_extrap</code> (see comments in wave_extrap for documenation) and plot them side-by-side:</p>
-<pre><code class="julia"># velocity
+<pre><code class="language-julia"># velocity
 v = 2000;
 
 # t-x grid
@@ -366,8 +381,7 @@ source = (tt-.1).*exp.(-1e-3*(xx-xs[is]).^2 - 1e3*(tt-.1).^2);
 # receiver wavefield is data for corresponding shot
 receiver = Float32.(block.data[:, sx.==xs[is]]);
 </code></pre>
-
-<pre><code class="julia">imshow(wave_extrap(source,t,xr,v,500,1), cmap=&quot;Greys&quot;, vmin=-.001, vmax=.001, extent=[xr[1], xr[end], T[end], T[1]], aspect=500)
+<pre><code class="language-julia">imshow(wave_extrap(source,t,xr,v,500,1), cmap=&quot;Greys&quot;, vmin=-.001, vmax=.001, extent=[xr[1], xr[end], T[end], T[1]], aspect=500)
 xlabel(&quot;x [m]&quot;)
 ylabel(&quot;t [s]&quot;)
 title(&quot;source wavefield at z=500 m.&quot;)
@@ -378,7 +392,6 @@ xlabel(&quot;x [m]&quot;)
 ylabel(&quot;t [s]&quot;)
 title(&quot;receiver wavefield at z=500 m.&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_26_0.png" /></p>
 <p><img alt="png" src="../../img/Exercise3_26_1.png" /></p>
 <pre><code>PyObject Text(0.5,1,'receiver wavefield at z=500 m.')
@@ -388,7 +401,7 @@ title(&quot;receiver wavefield at z=500 m.&quot;)
 <li>Extrapolate both source and receiver wavefields to differents depths. What do you notice?</li>
 </ul>
 <p>An image of the reflector can be constructed by correlating the two wavefields at zero time-lag (basically summing over time)</p>
-<pre><code class="julia"># velocity
+<pre><code class="language-julia"># velocity
 v = 2e3
 
 # depth
@@ -406,14 +419,12 @@ for iz = 1:length(z)
 end
 
 </code></pre>
-
-<pre><code class="julia">figure()
+<pre><code class="language-julia">figure()
 imshow(image, cmap=&quot;Greys&quot;, vmin=-1e-2, vmax=1e-2, extent=[xr[1], xr[end], z[end], z[1]], aspect=1)
 xlabel(&quot;x [m]&quot;)
 ylabel(&quot;z [m]&quot;)
 title(&quot;image for one source&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise3_30_0.png" /></p>
 <pre><code>PyObject Text(0.5,1,'image for one source')
 </code></pre>
@@ -424,7 +435,7 @@ title(&quot;image for one source&quot;)
 <li>Repeat this for all sources and sum the images for all sources, again also for too low/high velocity. What do you see?</li>
 <li>Describe how you would adapt the migration algorithm for a velocity that varies with depth.</li>
 </ul>
-<pre><code class="julia">function mig_extrap(data, t, xr, xs, z, v)
+<pre><code class="language-julia">function mig_extrap(data, t, xr, xs, z, v)
 #
 # shot-receiver migration for constant velocity by wavefield extrapolation.
 #
@@ -476,6 +487,7 @@ title(&quot;image for one source&quot;)
     return image
 end
 </code></pre></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -490,35 +502,32 @@ end
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

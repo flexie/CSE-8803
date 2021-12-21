@@ -9,57 +9,44 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Exercise 7 : Waveform inversion - Imaging w/ data-driven models</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
-                </div>
+                <a class="navbar-brand" href="../..">Imaging w/ data-driven models</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../../outline/">Topics</a>
+                            <li class="navitem">
+                                <a href="../../outline/" class="nav-link">Topics</a>
                             </li>
-                            <li >
-                                <a href="../../homework/">Assigments</a>
+                            <li class="navitem">
+                                <a href="../../homework/" class="nav-link">Assigments</a>
                             </li>
-                            <li >
-                                <a href="../../project/">Projects</a>
+                            <li class="navitem">
+                                <a href="../../project/" class="nav-link">Projects</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -69,19 +56,61 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#exercise-7-waveform-inversion">Exercise 7 : Waveform inversion</a></li>
-        <li class="main "><a href="#camambert-model">Camambert model:</a></li>
-        <li class="main "><a href="#source-geometry">Source geometry</a></li>
-        <li class="main "><a href="#receiver-geometry">Receiver geometry</a></li>
-        <li class="main "><a href="#optimization">Optimization</a></li>
-        <li class="main "><a href="#inversion">Inversion</a></li>
-        <li class="main "><a href="#bound-projection">Bound projection</a></li>
-        <li class="main "><a href="#setup">Setup</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#exercise-7-waveform-inversion" class="nav-link">Exercise 7 : Waveform inversion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#camambert-model" class="nav-link">Camambert model:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#source-geometry" class="nav-link">Source geometry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#receiver-geometry" class="nav-link">Receiver geometry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#optimization" class="nav-link">Optimization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#inversion" class="nav-link">Inversion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bound-projection" class="nav-link">Bound projection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#setup" class="nav-link">Setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="exercise-7-waveform-inversion">Exercise 7 : Waveform inversion</h1>
 <p>With waveform inversion we try to find the velocity model for which the modeled data optimally fits the observed data in a least-squares sense. Mathematically, we try to solve the following optimization problem:</p>
@@ -94,10 +123,9 @@
 <p>To illustrate some key properties of the waveform inversion problem, we are going to conduct some experiments on the famous 'Camambert' model.</p>
 <h1 id="camambert-model">Camambert model:</h1>
 <p>The Camambert model consists of a circular perturbation,  , superimposed on a homogeneous medium,  , with velocity 2500 m/s.</p>
-<pre><code class="julia">using JUDI.TimeModeling, JUDI.SLIM_optim, PyPlot, SeisIO
+<pre><code class="language-julia">using JUDI.TimeModeling, JUDI.SLIM_optim, PyPlot, SeisIO
 </code></pre>
-
-<pre><code class="julia"># Velocity model
+<pre><code class="language-julia"># Velocity model
 
 # number of gridpoints
 n = (101, 101)
@@ -124,22 +152,19 @@ m = 1f0./vp.^2f0
 v0 = 2.5f0 * ones(Float32, n)
 m0 = 1f0./v0.^2f0
 </code></pre>
-
-<pre><code class="julia">imshow(m)
+<pre><code class="language-julia">imshow(m)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise7_3_0.png" /></p>
 <pre><code>PyObject &lt;matplotlib.image.AxesImage object at 0x7fee6c4dca20&gt;
 </code></pre>
-<pre><code class="julia"># Set up model structure w/ squared slowness
+<pre><code class="language-julia"># Set up model structure w/ squared slowness
 model0 = Model(n, d, o, m0)
 model = Model(n, d, o, m)
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.Model((101, 101), (10.0, 10.0), (0.0, 0.0), 40, Float32[0.16 0.16 … 0.16 0.16; 0.16 0.16 … 0.16 0.16; … ; 0.16 0.16 … 0.16 0.16; 0.16 0.16 … 0.16 0.16], 1)
 </code></pre>
 <h1 id="source-geometry">Source geometry</h1>
-<pre><code class="julia"># Sources
+<pre><code class="language-julia"># Sources
 nsrc = 10
 xsrc = convertToCell(linspace(10f0, 990f0, nsrc))
 ysrc = convertToCell(linspace(0f0, 0f0, nsrc))
@@ -151,11 +176,10 @@ dtS = 2f0
 # Set up source structure
 srcGeometry = Geometry(xsrc,ysrc,zsrc; dt=dtS, t=timeS)
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.GeometryIC(Any[10.0, 118.889, 227.778, 336.667, 445.556, 554.444, 663.333, 772.222, 881.111, 990.0], Any[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], Any[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0], Any[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], Any[501, 501, 501, 501, 501, 501, 501, 501, 501, 501], Any[1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0])
 </code></pre>
 <h1 id="receiver-geometry">Receiver geometry</h1>
-<pre><code class="julia"># Receievers reflection
+<pre><code class="language-julia"># Receievers reflection
 nrec = 50f0
 xrec = linspace(10f0, 990f0, nrec)
 yrec = 0f0
@@ -179,7 +203,6 @@ dtR = 2f0
 # Set up receiver structure
 recGeometry_transmission = Geometry(xrec,yrec,zrec;dt=dtR,t=timeR, nsrc=nsrc)
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.GeometryIC(Any[10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0], Any[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], Any[990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0], Any[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], Any[501, 501, 501, 501, 501, 501, 501, 501, 501, 501], Any[1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0])
 </code></pre>
 <h1 id="optimization">Optimization</h1>
@@ -210,7 +233,7 @@ Transmission setup:<code>transmission_data.segy</code>.</p>
 <h1 id="bound-projection">Bound projection</h1>
 <p>ProjBound(x) = boundproject(x, maximum(m), .9*minimum(m))</p>
 <h1 id="setup">Setup</h1>
-<pre><code class="julia"># To setup the operator in for example the reflection case
+<pre><code class="language-julia"># To setup the operator in for example the reflection case
 
 # setup wavelet
 f0 = 0.01f0  # 5 Hz wavelet
@@ -222,29 +245,25 @@ q = judiVector(srcGeometry, wavelet)
 ntComp = get_computational_nt(srcGeometry, recGeometry_reflection, model)
 info = Info(prod(n), nsrc, ntComp)
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.Info(10201, 10, Any[596, 596, 596, 596, 596, 596, 596, 596, 596, 596])
 </code></pre>
-<pre><code class="julia">
+<pre><code class="language-julia">
 F_r = judiModeling(info, model, srcGeometry, recGeometry_reflection)
 
 F_t = judiModeling(info, model, srcGeometry, recGeometry_transmission)
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.judiPDEfull{Float32,Float32}("Proj*F*Proj'", 250500, 5010, JUDI.TimeModeling.Info(10201, 10, Any[596, 596, 596, 596, 596, 596, 596, 596, 596, 596]), JUDI.TimeModeling.Model((101, 101), (10.0, 10.0), (0.0, 0.0), 40, Float32[0.16 0.16 … 0.16 0.16; 0.16 0.16 … 0.16 0.16; … ; 0.16 0.16 … 0.16 0.16; 0.16 0.16 … 0.16 0.16], 1), JUDI.TimeModeling.GeometryIC(Any[10.0, 118.889, 227.778, 336.667, 445.556, 554.444, 663.333, 772.222, 881.111, 990.0], Any[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], Any[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0], Any[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], Any[501, 501, 501, 501, 501, 501, 501, 501, 501, 501], Any[1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0]), JUDI.TimeModeling.GeometryIC(Any[10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0], Any[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], Any[990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0], Any[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], Any[501, 501, 501, 501, 501, 501, 501, 501, 501, 501], Any[1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0]), JUDI.TimeModeling.Options(8, false, false, 1000.0, false, false, "", "shot", false, false, nothing, nothing, Any[], 1, false), JUDI.TimeModeling.#85, Nullable{Function}(JUDI.TimeModeling.#86))
 </code></pre>
-<pre><code class="julia">d_trans = F_t * q
+<pre><code class="language-julia">d_trans = F_t * q
 </code></pre>
-
 <pre><code>JUDI.TimeModeling.judiVector{Float32}("Seismic data vector", 250500, 1, 10, JUDI.TimeModeling.GeometryIC(Any[10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0, 10.0f0:20.0f0:990.0f0], Any[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], Any[990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0, 990.0f0:0.0f0:990.0f0], Any[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], Any[501, 501, 501, 501, 501, 501, 501, 501, 501, 501], Any[1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0]), Array[Float32[0.0 0.0 … 0.0 -0.0; -0.0 -0.0 … -0.0 0.0; … ; -0.264154 -0.289299 … 0.226348 0.220771; 0.0 0.0 … 0.0 0.0], Float32[-0.0 0.0 … 0.0 -0.0; 0.0 -0.0 … -0.0 0.0; … ; -0.149297 -0.0876982 … 0.289633 0.307329; 0.0 0.0 … 0.0 0.0], Float32[0.0 -0.0 … -0.0 -0.0; -0.0 0.0 … 0.0 0.0; … ; 0.0364218 0.0267914 … 0.200437 0.193765; 0.0 0.0 … 0.0 0.0], Float32[0.0 0.0 … -0.0 -0.0; -0.0 -0.0 … 0.0 0.0; … ; 0.133302 0.14125 … -0.0362351 -0.0663129; 0.0 0.0 … 0.0 0.0], Float32[-0.0 -0.0 … -0.0 0.0; 0.0 0.0 … 0.0 -0.0; … ; 0.162256 0.161237 … 0.0194431 0.0264048; 0.0 0.0 … 0.0 0.0], Float32[0.0 -0.0 … -0.0 -0.0; -0.0 0.0 … 0.0 0.0; … ; 0.0264062 0.0194453 … 0.161238 0.162256; 0.0 0.0 … 0.0 0.0], Float32[-0.0 -0.0 … 0.0 0.0; 0.0 0.0 … -0.0 -0.0; … ; -0.0663133 -0.0362352 … 0.14125 0.133301; 0.0 0.0 … 0.0 0.0], Float32[-0.0 -0.0 … -0.0 0.0; 0.0 0.0 … 0.0 -0.0; … ; 0.193767 0.200438 … 0.0267931 0.0364229; 0.0 0.0 … 0.0 0.0], Float32[-0.0 0.0 … 0.0 -0.0; 0.0 -0.0 … -0.0 0.0; … ; 0.307329 0.289633 … -0.0877006 -0.1493; 0.0 0.0 … 0.0 0.0], Float32[-0.0 0.0 … 0.0 0.0; 0.0 -0.0 … -0.0 -0.0; … ; 0.22077 0.226348 … -0.2893 -0.264157; 0.0 0.0 … 0.0 0.0]])
 </code></pre>
-<pre><code class="julia">imshow(d_trans.data[10], vmin=-1, vmax=1, cmap=&quot;seismic&quot;)
+<pre><code class="language-julia">imshow(d_trans.data[10], vmin=-1, vmax=1, cmap=&quot;seismic&quot;)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise7_15_0.png" /></p>
 <pre><code>PyObject &lt;matplotlib.image.AxesImage object at 0x7fee6a3370b8&gt;
 </code></pre>
-<pre><code class="julia">function f(x)
+<pre><code class="language-julia">function f(x)
 
     # Update model
     model0.m = convert(Array{Float32, 2}, reshape(x, model0.n))
@@ -270,15 +289,13 @@ F_t = judiModeling(info, model, srcGeometry, recGeometry_transmission)
 end
 
 </code></pre>
-
 <pre><code>f (generic function with 1 method)
 </code></pre>
-<pre><code class="julia">F0_t = judiModeling(info, model0, srcGeometry, recGeometry_transmission)
+<pre><code class="language-julia">F0_t = judiModeling(info, model0, srcGeometry, recGeometry_transmission)
 J = judiJacobian(F0_t, q);
 
 dm = J'*d_trans
 </code></pre>
-
 <pre><code>10201-element Array{Float32,1}:
   4.39141 
   0.676352
@@ -307,19 +324,17 @@ dm = J'*d_trans
   2.24424 
   2.51696
 </code></pre>
-<pre><code class="julia">imshow(d_trans.data[1], vmin=-1, vmax=1)
+<pre><code class="language-julia">imshow(d_trans.data[1], vmin=-1, vmax=1)
 </code></pre>
-
 <p><img alt="png" src="../../img/Exercise7_18_0.png" /></p>
 <pre><code>PyObject &lt;matplotlib.image.AxesImage object at 0x7fee68e88748&gt;
 </code></pre>
-<pre><code class="julia"># invert
+<pre><code class="language-julia"># invert
 options = pqn_options(verbose=3, maxIter=10, corrections=10)
 # Bound projection
 ProjBound(x) = boundproject(x, maximum(m), .9*minimum(m))
 x, fsave, funEvals= minConf_PQN(f, vec(m0), ProjBound, options)
 </code></pre>
-
 <pre><code>Running PQN...
 Number of L-BFGS Corrections to store: 10
 Spectral initialization of SPG: 0
@@ -348,11 +363,11 @@ Step size below progTol
 
 (Float32[0.444444, 0.444267, 0.444267, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444  …  0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444, 0.444444], [0.0, 2.33499e5, 2.33499e5], 6)
 </code></pre>
-<pre><code class="julia">
+<pre><code class="language-julia">
 </code></pre>
-
-<pre><code class="julia">
+<pre><code class="language-julia">
 </code></pre></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -367,35 +382,32 @@ Step size below progTol
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
