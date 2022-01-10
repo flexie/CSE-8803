@@ -27,7 +27,6 @@ Office Hours: by appointment via [Microsoft Teams](https://faq.oit.gatech.edu/co
 [R]:http://www.numerical-tours.com/r/
 [Solving inverse problems using data-driven models]:https://www.cambridge.org/core/journals/acta-numerica/article/solving-inverse-problems-using-datadriven-models/CE5B3725869AEAF46E04874115B0AB15
 
-
 ### Topics
 
 See [Topics](outline.md) tab (adapted from [Mathematical Foundations of Data Sciences] and [Solving inverse problems using data-driven models])
