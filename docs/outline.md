@@ -30,6 +30,11 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 [Signal and Image Decomposition in Orthogonal Bases] adapted from [here].
 
 [Signal and Image Decomposition in Orthogonal Bases]:https://www.dropbox.com/s/efy6fghhip6y7ko/1-course-signal-orthobases-new.pdf?dl=0
+
+### Recordings
+
+- [Recording for Lecture 1](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220111_135930-Meeting%20Recording.mp4?csf=1&web=1&e=iVhGLL)
+
 *** 
 
 ## Fourier Processing
