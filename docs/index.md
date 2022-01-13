@@ -8,7 +8,7 @@ CODA, room S1375B
 
 Time and Location Tuesday/Thursday 2:00 pm - 3:15 pm, Engineering Sci and Mechanics rm 201
 
-Office Hours: by appointment via [Microsoft Teams](https://faq.oit.gatech.edu/content/how-do-i-access-microsoft-teams)
+Office Hours: by appointment via [Microsoft Teams](https://it.iac.gatech.edu/get-teams)
 
 *** 
 
