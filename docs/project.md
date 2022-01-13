@@ -63,10 +63,10 @@ The report needs to be written as a short journal paper. Students will be requir
 Late submission is unacceptable and will lead to deductions in your grade. The deadline for submission will be communicate in class.
 
 
-### Spreadsheet for paper presentations
+<!--  ### Spreadsheet for paper presentations
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmODDI71PRPVCzjHqjIz5T1aDr8B59hg8J-PmFtm3bASmkuK6SzotgjZPwfshIggR6BQnIQF5a6JlL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
+-->
 
 ### Calendar for events
 
