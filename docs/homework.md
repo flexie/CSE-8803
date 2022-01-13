@@ -10,10 +10,10 @@ To get the the recently tested Jupyter notebooks in Python, please clone the Num
 ### Posted assignments:
 
 **Reminder**: Make sure you pull the latest commits in [the fork] after each assignment is posted.
-<!-- 
-1. Exercises 1 and 2 from [Introduction to Image Processing], exercises 1-4 from [Image Approximation with Fourier and Wavelets], and exercises 1-3 from [2-D Daubechies Wavelets]. 
-	* **Due date**: Thursday, January 23, at 3:00 PM.
 
+1. Exercises 1 and 2 from [Introduction to Image Processing], exercises 1-4 from [Image Approximation with Fourier and Wavelets], and exercises 1-3 from [2-D Daubechies Wavelets]. 
+	* **Due date**: Thursday, January 20, at 2:00 PM.
+<!-- 
 2. Exercises 1-5 from [Volumetric wavelet Data Processing], exercises 1 and 2 from [Linear Image Denoising], exercises 1-3 from [Wavelet Denoising], exercises 1-4 from [Wavelet Block Thresholding], and exercises 1-6 from [Stein Unbiased Risk Estimator].
 	* **Due date**: Thursday, January 30, at 3:00 PM. 
 
