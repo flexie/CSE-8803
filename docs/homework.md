@@ -9,6 +9,8 @@ To get the the recently tested Jupyter notebooks in Python, please clone the Num
 
 ### Posted assignments:
 
+**Note**: The homework notebooks come with a runnable script for the solution of each exercise. That is not taken away in order for you to get an idea of what the output of the solution should look like. The source code for the solution is also inside the repo. We don’t attempt to hide this as these numerical tours are extensively used and it would be easy for you to find these solutions regardless. For optimal learning, do not look at the source code of the solution and give it an honest attempt in writing your own source code from scratch. A large portion of the grade comes from responding the prompts that the exercises ask so make sure to respond them as clearly as you can.
+
 **Reminder**: Make sure you pull the latest commits in [the fork] after each assignment is posted.
 
 1. Exercises 1 and 2 from [Introduction to Image Processing], exercises 1-4 from [Image Approximation with Fourier and Wavelets], and exercises 1-3 from [2-D Daubechies Wavelets]. 
@@ -26,11 +28,12 @@ Make a script that produces the plots and carefully describes your findings. The
 
 Generate a pdf or HTML file from your script. You may do this by exporting the Jupyter notebook that contains your answers/codes. Make sure that the lay-out is readable. Look for documentation on making up your code for publication.
 
-The naming convention for this file is GTID_assingmentnumber.[pdf/html]. Send the file to [Rafael Orozco](mailto:rorozco@gatech.edu) with subject **CSE 8803**. For some exercises you will be asked to write separate functions. In this case include ALL the files in a zip-file named GTID_assingmentnumber.zip.
+The naming convention for this file is GTID_assignmentnumber.[pdf/html]. Send the file to [Rafael Orozco](mailto:rorozco@gatech.edu) with subject **CSE 8803**. For some exercises you will be asked to write separate functions. In this case include ALL the files in a zip-file named GTID_assignmentnumber.zip.
 
+<!-- 
 If you need further assistance, you can find Ali at S1363L workstation (13th floor), Coda Building.
 
-ASSIGNMENTS THAT DO NOT FOLLOW THE NAMING CONVENTIONS OR ARE SEND AFTER THE POSTED DEADLINE WILL NOT BE GRADED
+ASSIGNMENTS THAT DO NOT FOLLOW THE NAMING CONVENTIONS OR ARE SEND AFTER THE POSTED DEADLINE WILL NOT BE GRADED -->
 
 
 [Numerical Tours of Data Sciences]:http://www.numerical-tours.com/
