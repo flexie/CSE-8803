@@ -37,6 +37,9 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 
 - [Recording for Lecture 2](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220113_135959-Meeting%20Recording.mp4?csf=1&web=1&e=If085B)
 
+- [Recording for Lecture 3](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220118_135748-Meeting%20Recording.mp4?csf=1&web=1&e=UydDQV)
+
+
 *** 
 
 ## Fourier Processing
