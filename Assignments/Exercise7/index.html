@@ -207,12 +207,12 @@ recGeometry_transmission = Geometry(xrec,yrec,zrec;dt=dtR,t=timeR, nsrc=nsrc)
 </code></pre>
 <h1 id="optimization">Optimization</h1>
 <p>lbfgs (minConf_PQN here) can be used to solve optimization problems of the form:</p>
-<p>$\min_{\mathbf{m}}\quad \phi(\mathbf{m})$</p>
+<p><span class="arithmatex">\(\min_{\mathbf{m}}\quad \phi(\mathbf{m})\)</span></p>
 <p>The method needs a function that calculates the misfit and gradient. The gradient of the LS misfit:</p>
-<p>$\phi(\mathbf{m}) = \frac{1}{2}|F(\mathbf{m}) {-} \mathbf{d}|_2^2$</p>
+<p><span class="arithmatex">\(\phi(\mathbf{m}) = \frac{1}{2}|F(\mathbf{m}) {-} \mathbf{d}|_2^2\)</span></p>
 <p>is given by</p>
-<p>$\nabla\phi(\mathbf{m}) = J(\mathbf{m})^*(F(\mathbf{m}) {-} \mathbf{d})$</p>
-<p>where $J(\mathbf{m})$ is the Jacobian matrix of $F$ and $^*# denotes the complex-conjugate-transpose (' in Julia). The Jacobian is provided by the modeling operator: <code>J = judiJacobian(F, q)</code></p>
+<p><span class="arithmatex">\(\nabla\phi(\mathbf{m}) = J(\mathbf{m})^*(F(\mathbf{m}) {-} \mathbf{d})\)</span></p>
+<p>where <span class="arithmatex">\(J(\mathbf{m})\)</span> is the Jacobian matrix of <span class="arithmatex">\(F\)</span> and $^*# denotes the complex-conjugate-transpose (' in Julia). The Jacobian is provided by the modeling operator: <code>J = judiJacobian(F, q)</code></p>
 <p>Write a julia function misfit(m) that returns the value of the misfit and the gradient for the given model <code>m</code>.
 minConf_SQP that function as an input</p>
 <h1 id="inversion">Inversion</h1>
@@ -379,7 +379,9 @@ Step size below progTol
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

@@ -110,9 +110,9 @@
 <h1 id="nmo-correction">NMO correction</h1>
 <p>The traveltime as a function of offset of a reflected event can be approximated by the NMO traveltime:</p>
 <p>$
-\tau(t_0,h) = \sqrt{t_0 + h^2/v^2}
+\tau(t_0,h) = \sqrt{t_0 + h<sup>2/v</sup>2}
 $</p>
-<p>where $(t_0)$ is the zero-offset or vertical traveltime and $v$ is the effective or NMO velocity.</p>
+<p>where <span class="arithmatex">\((t_0)\)</span> is the zero-offset or vertical traveltime and <span class="arithmatex">\(v\)</span> is the effective or NMO velocity.</p>
 <p>We can now correct the data for the moveout via a simple coordinate transform:</p>
 <p>$
 d_{NMO}(t_0,h) = d(\tau(t_0,h),h)
@@ -239,7 +239,7 @@ ylabel(&quot;time&quot;)
 <p>To figure out which NMO velocity optimally flattens all the events, we can scan through a range of constant NMO velocities and see which events are flattened for which velocity. One way to judge flatness of an event is via the stackpower. The stackpower is just a sum along the offset direction of the values-squared of the NMO-corrected gather:</p>
 <p>$ S(t_0,v) = \int!!\mathrm{d}h\, d(\tau(t_0,h,v),h)^2 $</p>
 <p>The function $ S(t_0,v) $ is called a semblance panel.</p>
-<p>The desired NMO velocity can be found by picking the maximum as a function of $t_0$ and $v$ from the semblance panel.</p>
+<p>The desired NMO velocity can be found by picking the maximum as a function of <span class="arithmatex">\(t_0\)</span> and <span class="arithmatex">\(v\)</span> from the semblance panel.</p>
 <p>An example of a semblance panel and the resulting NMO velocity is shown below.</p>
 <pre><code class="language-julia">v = linspace(1000, 3000, 500)
 # scan over velocities
@@ -301,7 +301,9 @@ ylabel(&quot;time&quot;)
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

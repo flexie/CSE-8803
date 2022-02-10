@@ -118,9 +118,9 @@
  - Zero-offset migration
  - Prestack migration
  - Wavefield extrapolation</p>
-<p>For a constant-velocity medium, we can extrapolate a wavefield at depth $z$ to depth $z+\Delta z$ via a simple phase shift in the $f-k$ domain:</p>
-<p>$ u(\omega,k,z + \Delta z) = u(\omega,k,z)\exp[\imath\Delta z\sqrt(\omega^2/v^2 - k^2)]$</p>
-<p>To illustrate this, we generate a source wavefield in the $t-x$ domain and extrapolate it. First, let's define an impulsive source.</p>
+<p>For a constant-velocity medium, we can extrapolate a wavefield at depth <span class="arithmatex">\(z\)</span> to depth <span class="arithmatex">\(z+\Delta z\)</span> via a simple phase shift in the <span class="arithmatex">\(f-k\)</span> domain:</p>
+<p>$ u(\omega,k,z + \Delta z) = u(\omega,k,z)\exp[\imath\Delta z\sqrt(\omega<sup>2/v</sup>2 - k^2)]$</p>
+<p>To illustrate this, we generate a source wavefield in the <span class="arithmatex">\(t-x\)</span> domain and extrapolate it. First, let's define an impulsive source.</p>
 <pre><code class="language-julia">using PyPlot
 </code></pre>
 <h1 id="f-k-domain-transform-function-fktran">f-k domain transform function fktran</h1>
@@ -213,7 +213,7 @@ plot(k,abs.(W[ff.==10]))
 xlabel(&quot;k [1/m]&quot;);ylabel(&quot;|W|&quot;);title(&quot;|W| @ 10 Hz.&quot;);
 </code></pre>
 <p><img alt="png" src="../../img/Exercise3_9_0.png" /></p>
-<p>The region where the extrapolation factor is smaller than one is called the evanescent region. Waves this these wavenumbers will be damped. We have to be carefull with the sign of (k_z) in the exponentional factor and make sure that the absolute value is always smaller than one.</p>
+<p>The region where the extrapolation factor is smaller than one is called the evanescent region. Waves this these wavenumbers will be damped. We have to be carefull with the sign of <span class="arithmatex">\(k_z\)</span> in the exponentional factor and make sure that the absolute value is always smaller than one.</p>
 <p>The wavefield at z = 500 m looks like</p>
 <pre><code class="language-julia"># fix sign of kz
 kz = -real(kz)+im*abs.(imag(kz));
@@ -241,7 +241,7 @@ title(&quot;wavefield at z=500 m.&quot;)
 <h1 id="zero-offset-migration">Zero-offset migration</h1>
 <p>In this part of the exercise we look at zero-offset migration. This type of migration is based on the
 "exploding-reflector" concept. Zero-offset migration can be done by exptrapolating the zero-offset data with half-velocity
-and taking the image to be slice of the wavefield at $t=0$ for each depth step: $I(z,x) = u(z,x,t=0)$</p>
+and taking the image to be slice of the wavefield at <span class="arithmatex">\(t=0\)</span> for each depth step: <span class="arithmatex">\(I(z,x) = u(z,x,t=0)\)</span></p>
 <p>The function wave_extrap.m takes in a wavefield u and the correspoding time/space vectors t,x, a velocity v,
 a depth step dz and a propagation direction dir and extrapolates the input wavefield.</p>
 <p>Load the zero-offset <code>data data1_zero.segy</code> (in Dropbox) and define the source, receiver and time coordinates. The units of the source and receiver coordinates are in meters for this file. The data looks like this</p>
@@ -499,7 +499,9 @@ end
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

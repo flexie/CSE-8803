@@ -200,7 +200,7 @@ G2 = joOnes(N);
                             G2    246 bytes  JOLI.joMatrix{Float64,Float64}
 </code></pre>
 <h1 id="deconvolution">Deconvolution</h1>
-<p>We some signal $f(t)$ which is a convolution of some unkown signal $g(t)$ and a known filter $w(t)$. Given $f$ and $w$ we would like to retreive $g$.</p>
+<p>We some signal <span class="arithmatex">\(f(t)\)</span> which is a convolution of some unkown signal <span class="arithmatex">\(g(t)\)</span> and a known filter <span class="arithmatex">\(w(t)\)</span>. Given <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(w\)</span> we would like to retreive <span class="arithmatex">\(g\)</span>.</p>
 <p>For the example we use:</p>
 <pre><code class="language-julia"># time axis
 t = 0:.001:2';
@@ -317,7 +317,9 @@ opts = spgOptions(optTol = 1e-10,
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
