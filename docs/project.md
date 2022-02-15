@@ -14,7 +14,7 @@ The projects consist of three parts
 
 #### One pager + 5 min pitch
 
-On February 25th, everybody needs to give a 5 minute pitch on their project proposal. That same day, the "one pager" outlining the project is due by 6:00 PM. See description below. Your seminar will be evaluated with this [form].
+On March 1th, everybody needs to give a 5 minute pitch on their project proposal. That same day, the "one pager" outlining the project is due by 6:00 PM. See description below. Your seminar will be evaluated with this [form].
 
 [form]:https://www.dropbox.com/s/3qjsb9cws8ntilc/seminar_eval.pdf?dl=0
 

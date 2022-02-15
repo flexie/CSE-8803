@@ -48,6 +48,10 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 - [Recording for Lecture 8](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/New%20channel%20meeting-20220203_135918-Meeting%20Recording.mp4?csf=1&web=1&e=RKoFI9)
 
 - [Recording for Lecture 9](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220208_135827-Meeting%20Recording.mp4?csf=1&web=1&e=TOlmLs)
+ 
+- [Recording for Lecture 10](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220210_135810-Meeting%20Recording.mp4?csf=1&web=1&e=YbhclO)
+
+- [Recording for Lecture 11](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220215_135810-Meeting%20Recording.mp4?csf=1&web=1&e=rzl0Ss)
 
 *** 
 
