@@ -53,6 +53,8 @@ Chapter 1 from [Advanced Signal, Image and Surface Processing]
 
 - [Recording for Lecture 11](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220215_135810-Meeting%20Recording.mp4?csf=1&web=1&e=rzl0Ss)
 
+- [Recording for Lecture 12](https://gtvault.sharepoint.com/:v:/r/sites/Imagingwdata-drivenmodelsCSE8803/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20220217_135851-Meeting%20Recording.mp4?csf=1&web=1&e=AwI09f)
+
 *** 
 
 ## Fourier Processing
@@ -281,6 +283,15 @@ See [assignment](homework.md) tab.
 
 *** 
 
+### Bayesian Inference
+
+### Reading material
+
+[Deep Bayesian inference for seismic imaging with tasks](https://slim.gatech.edu/content/deep-bayesian-inference-seismic-imaging-tasks)
+
+### Slides
+
+[Slide deck 1](https://www.dropbox.com/s/7dl3n8hmfnvmwed/11-ML-seismic-inverse.pdf?dl=0)
 
 ### Statistical Regularization 
 
