@@ -62,12 +62,10 @@ The report needs to be written as a short journal paper. Students will be requir
 
 Late submission is unacceptable and will lead to deductions in your grade. The deadline for submission will be communicate in class.
 
-
-<!--  ### Spreadsheet for paper presentations
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmODDI71PRPVCzjHqjIz5T1aDr8B59hg8J-PmFtm3bASmkuK6SzotgjZPwfshIggR6BQnIQF5a6JlL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<!-- 
+### Spreadsheet for paper presentations
+<iframe width=”800” and height=”600”  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSez4DG-tIVDgwLFN19k9uWlVHfn1yDXHn9KnMbBX7tTHLnCC6RaZ1C6TEUfkjUYtvwpa7Ked74HCTA/pubhtml?widget=true&amp;headers=false"></iframe>
 -->
 
 ### Calendar for events
-
-<iframe src="https://calendar.google.com/calendar/embed?src=ooeg4d1atbie3bh4kf7fq4f4fc%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?src=2qgpk7km772vtfu05dlj87duto%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> 
